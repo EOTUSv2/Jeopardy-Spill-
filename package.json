@@ -1,0 +1,21 @@
+{
+  "name": "jeopardy-spill",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "cross-env NEXT_DIST_DIR=.next-prod NEXT_TELEMETRY_DISABLED=1 next build",
+    "start": "cross-env NODE_ENV=production NEXT_DIST_DIR=.next-prod NEXT_TELEMETRY_DISABLED=1 node server.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/fredoka": "^5.3.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

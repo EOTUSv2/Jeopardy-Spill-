@@ -1,0 +1,2816 @@
+{
+  "categories": [
+    {
+      "name": "Geografi",
+      "hint": "Land, byer, fjell og natur rundt om i verden.",
+      "questions": [
+        [
+          {
+            "q": "Hvilket land har Eiffeltårnet?",
+            "a": "Frankrike"
+          },
+          {
+            "q": "Hvilket hav ligger mellom Europa og Amerika?",
+            "a": "Atlanterhavet"
+          },
+          {
+            "q": "Hvilket land er kjent for pyramidene i Giza?",
+            "a": "Egypt"
+          }
+        ],
+        [
+          {
+            "q": "Hva er hovedstaden i Japan?",
+            "a": "Tokyo"
+          },
+          {
+            "q": "Hva er hovedstaden i Tyskland?",
+            "a": "Berlin"
+          },
+          {
+            "q": "Hva er hovedstaden i Spania?",
+            "a": "Madrid"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket kontinent ligger Sahara-ørkenen i?",
+            "a": "Afrika"
+          },
+          {
+            "q": "Hvilket kontinent er det største i verden?",
+            "a": "Asia"
+          },
+          {
+            "q": "Hvilket kontinent har flest land?",
+            "a": "Afrika"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken elv regnes som verdens lengste?",
+            "a": "Nilen"
+          },
+          {
+            "q": "Hvilket fjell er høyest i verden?",
+            "a": "Mount Everest"
+          },
+          {
+            "q": "Hvilken ørken regnes som den største varme ørkenen i verden?",
+            "a": "Sahara"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket land har flest innbyggere i verden?",
+            "a": "India"
+          },
+          {
+            "q": "Hvilket land har flest tidssoner?",
+            "a": "Frankrike"
+          },
+          {
+            "q": "Hvilket land strekker seg over hele 11 tidssoner?",
+            "a": "Russland"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Historie",
+      "hint": "Hendelser, årstall og personer fra fortiden.",
+      "questions": [
+        [
+          {
+            "q": "I hvilket tiår startet andre verdenskrig?",
+            "a": "1930-tallet (1939)"
+          },
+          {
+            "q": "Hvilken gammel sivilisasjon bygde pyramidene i Egypt?",
+            "a": "De gamle egypterne"
+          },
+          {
+            "q": "Hvilket århundre lever vi i nå?",
+            "a": "2000-tallet (21. århundre)"
+          }
+        ],
+        [
+          {
+            "q": "Hvem var Norges konge under andre verdenskrig?",
+            "a": "Kong Haakon VII"
+          },
+          {
+            "q": "Hvem var president i USA under den amerikanske borgerkrigen?",
+            "a": "Abraham Lincoln"
+          },
+          {
+            "q": "Hvilket skip sank på jomfruturen i 1912?",
+            "a": "Titanic"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år falt Berlinmuren?",
+            "a": "1989"
+          },
+          {
+            "q": "Hvilket år endte andre verdenskrig?",
+            "a": "1945"
+          },
+          {
+            "q": "Hvilket år betrådte mennesket månen for første gang?",
+            "a": "1969"
+          }
+        ],
+        [
+          {
+            "q": "Hvem ledet den europeiske ekspedisjonen som nådde Amerika i 1492?",
+            "a": "Christopher Columbus"
+          },
+          {
+            "q": "Hvem var Frankrikes keiser på begynnelsen av 1800-tallet?",
+            "a": "Napoleon Bonaparte"
+          },
+          {
+            "q": "Hvem oppfant boktrykkerkunsten i Europa på 1400-tallet?",
+            "a": "Johannes Gutenberg"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år ble Norge selvstendig fra Sverige?",
+            "a": "1905"
+          },
+          {
+            "q": "Hvilket år ble den norske Grunnloven signert?",
+            "a": "1814"
+          },
+          {
+            "q": "Hvilket år startet den franske revolusjonen?",
+            "a": "1789"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Film",
+      "hint": "Skuespillere, regissører og kjente filmer.",
+      "questions": [
+        [
+          {
+            "q": "Hvem spiller Iron Man i Marvel-filmene?",
+            "a": "Robert Downey Jr."
+          },
+          {
+            "q": "Hvilken filmserie handler om en gutt som går på trollmannsskole?",
+            "a": "Harry Potter"
+          },
+          {
+            "q": "Hvilken Disney-film handler om en snømann som heter Olaf?",
+            "a": "Frost"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken film handler om et skip som synker i 1912?",
+            "a": "Titanic"
+          },
+          {
+            "q": "Hvilken filmserie handler om biler som blir levende?",
+            "a": "Cars"
+          },
+          {
+            "q": "Hvem spilte hovedrollen som Jack Sparrow i Pirates of the Caribbean?",
+            "a": "Johnny Depp"
+          }
+        ],
+        [
+          {
+            "q": "Hvem regisserte filmen «Jaws»?",
+            "a": "Steven Spielberg"
+          },
+          {
+            "q": "Hvem regisserte «Pulp Fiction»?",
+            "a": "Quentin Tarantino"
+          },
+          {
+            "q": "Hvem regisserte «Titanic» og «Avatar»?",
+            "a": "James Cameron"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken filmtrilogi er basert på bøker av J.R.R. Tolkien?",
+            "a": "Ringenes Herre"
+          },
+          {
+            "q": "Hvilken filmserie følger agenten med kodenavn 007?",
+            "a": "James Bond"
+          },
+          {
+            "q": "Hvilken filmserie handler om en arkeolog med hatt og pisk?",
+            "a": "Indiana Jones"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken sørkoreansk film vant Oscar for beste film i 2020?",
+            "a": "Parasite"
+          },
+          {
+            "q": "Hvilken film har rekorden for flest Oscar-vinster (11 stk), delt med to andre?",
+            "a": "Titanic, Ben-Hur eller Ringenes Herre: Kongen vender tilbake"
+          },
+          {
+            "q": "Hvilken regissør har vunnet flest Oscar-priser for beste regi (4 stykker)?",
+            "a": "John Ford"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Musikk",
+      "hint": "Artister, sanger og musikkhistorie.",
+      "questions": [
+        [
+          {
+            "q": "Hvem synger «Shape of You»?",
+            "a": "Ed Sheeran"
+          },
+          {
+            "q": "Hvilket britisk band besto av John, Paul, George og Ringo?",
+            "a": "The Beatles"
+          },
+          {
+            "q": "Hvem synger «Faded»?",
+            "a": "Alan Walker"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket land arrangerte Eurovision Song Contest i 2022?",
+            "a": "Italia (Torino)"
+          },
+          {
+            "q": "Hvilket norsk komikerduo står bak låten «The Fox»?",
+            "a": "Ylvis"
+          },
+          {
+            "q": "Hvem vant Eurovision for Norge i 2009 med låten «Fairytale»?",
+            "a": "Alexander Rybak"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket instrument har vanligvis 88 tangenter?",
+            "a": "Piano"
+          },
+          {
+            "q": "Hvilket strengeinstrument spilles med bue?",
+            "a": "Fiolin"
+          },
+          {
+            "q": "Hvilket instrument forbindes med Skottland og fylles med luft under armen?",
+            "a": "Sekkepipe"
+          }
+        ],
+        [
+          {
+            "q": "Hvem komponerte «Peer Gynt»-suiten?",
+            "a": "Edvard Grieg"
+          },
+          {
+            "q": "Hvem komponerte ni symfonier og ble døv i sine siste leveår?",
+            "a": "Ludwig van Beethoven"
+          },
+          {
+            "q": "Hvem komponerte operaen «Tryllefløyten»?",
+            "a": "Wolfgang Amadeus Mozart"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken norsk komponist skrev musikkstykket «Morgenstemning»?",
+            "a": "Edvard Grieg"
+          },
+          {
+            "q": "I hvilket tiår ble The Beatles oppløst?",
+            "a": "1970-tallet (1970)"
+          },
+          {
+            "q": "Hvem regnes som «The King of Pop»?",
+            "a": "Michael Jackson"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Sport",
+      "hint": "Idrett, mesterskap og sportslige rekorder.",
+      "questions": [
+        [
+          {
+            "q": "Hvor mange spillere har et fotballag på banen samtidig?",
+            "a": "11"
+          },
+          {
+            "q": "Hvilken idrett bruker en puck?",
+            "a": "Ishockey"
+          },
+          {
+            "q": "Hvilken idrett spilles med racket og fjærball?",
+            "a": "Badminton"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken idrett spilles på Wimbledon?",
+            "a": "Tennis"
+          },
+          {
+            "q": "Hvilken idrett drives det med i Tour de France?",
+            "a": "Sykling"
+          },
+          {
+            "q": "Hvilken idrett spilles på en bane med basket og nett hvor man ikke får la ballen treffe bakken på egen banehalvdel?",
+            "a": "Volleyball"
+          }
+        ],
+        [
+          {
+            "q": "Hvor ofte arrangeres de olympiske sommerleker?",
+            "a": "Hvert 4. år"
+          },
+          {
+            "q": "Hvor mange ganger har Norge arrangert vinter-OL?",
+            "a": "To ganger (Oslo 1952 og Lillehammer 1994)"
+          },
+          {
+            "q": "Hvor mange sett må man normalt vinne for å vinne en femsettskamp i tennis?",
+            "a": "3"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket land vant fotball-VM i 2022?",
+            "a": "Argentina"
+          },
+          {
+            "q": "Hvilket land vant fotball-VM i 2018?",
+            "a": "Frankrike"
+          },
+          {
+            "q": "Hvem har vunnet flest Grand Slam-titler i herretennis?",
+            "a": "Novak Djokovic"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket land har vunnet flest medaljer totalt i vinter-OLs historie?",
+            "a": "Norge"
+          },
+          {
+            "q": "Hvem har flest OL-gull gjennom tidene?",
+            "a": "Michael Phelps"
+          },
+          {
+            "q": "Hvilket land har vunnet flest fotball-VM-titler?",
+            "a": "Brasil (5 titler)"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Vitenskap",
+      "hint": "Fysikk, kjemi, biologi og naturvitenskap.",
+      "questions": [
+        [
+          {
+            "q": "Hva kalles den minste enheten i et grunnstoff?",
+            "a": "Atom"
+          },
+          {
+            "q": "Hva kaller vi stjernen i sentrum av vårt solsystem?",
+            "a": "Solen"
+          },
+          {
+            "q": "Hvilken gass puster mennesker inn for å overleve?",
+            "a": "Oksygen"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange planeter er det i vårt solsystem?",
+            "a": "8"
+          },
+          {
+            "q": "Hva er den kjemiske formelen for vann?",
+            "a": "H2O"
+          },
+          {
+            "q": "Hva kalles læren om dyr?",
+            "a": "Zoologi"
+          }
+        ],
+        [
+          {
+            "q": "Hvem utviklet relativitetsteorien?",
+            "a": "Albert Einstein"
+          },
+          {
+            "q": "Hvem regnes som den som oppdaget tyngdekraften (eplehistorien)?",
+            "a": "Isaac Newton"
+          },
+          {
+            "q": "Hvem utviklet evolusjonsteorien?",
+            "a": "Charles Darwin"
+          }
+        ],
+        [
+          {
+            "q": "Hva kalles prosessen der planter omdanner sollys til energi?",
+            "a": "Fotosyntese"
+          },
+          {
+            "q": "Hva kalles den minste levende byggesteinen i kroppen?",
+            "a": "Cellen"
+          },
+          {
+            "q": "Hva heter kraften som holder planetene i bane rundt solen?",
+            "a": "Gravitasjon (tyngdekraft)"
+          }
+        ],
+        [
+          {
+            "q": "Hva er det kjemiske symbolet for gull?",
+            "a": "Au"
+          },
+          {
+            "q": "Hva er den kjemiske betegnelsen for vanlig bordsalt?",
+            "a": "NaCl"
+          },
+          {
+            "q": "Hvor mange kromosompar har et normalt menneske?",
+            "a": "23"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Mat og drikke",
+      "hint": "Mat, drikke og alt kulinarisk.",
+      "questions": [
+        [
+          {
+            "q": "Hvilket land kommer pizza opprinnelig fra?",
+            "a": "Italia"
+          },
+          {
+            "q": "Hvilken frukt er gul og krum?",
+            "a": "Banan"
+          },
+          {
+            "q": "Hva heter den norske frokostretten laget av havre kokt i vann eller melk?",
+            "a": "Havregrøt"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter den brune, søtlige norske osten?",
+            "a": "Brunost"
+          },
+          {
+            "q": "Hvilket land er kjent for sushi?",
+            "a": "Japan"
+          },
+          {
+            "q": "Hvilken drikk lages ved å brygge tørkede bønner i varmt vann?",
+            "a": "Kaffe"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken frukt er hovedingrediensen i guacamole?",
+            "a": "Avokado"
+          },
+          {
+            "q": "Hvilket krydder gir karri sin gule farge?",
+            "a": "Gurkemeie"
+          },
+          {
+            "q": "Hvilket land kommer ordentlig parmesanost opprinnelig fra?",
+            "a": "Italia"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket krydder kommer fra krokusblomsten og regnes som verdens dyreste?",
+            "a": "Safran"
+          },
+          {
+            "q": "Hvilket land er spesielt kjent for sjokolade og vafler?",
+            "a": "Belgia"
+          },
+          {
+            "q": "Hvilken drikk lages ved gjæring av druer?",
+            "a": "Vin"
+          }
+        ],
+        [
+          {
+            "q": "I hvilken region i Frankrike kommer champagne opprinnelig fra?",
+            "a": "Champagne"
+          },
+          {
+            "q": "Hvilket land regnes som opprinnelsen til soyasaus?",
+            "a": "Kina"
+          },
+          {
+            "q": "Hva heter den italienske skinken som tørrsaltes og lufttørkes, ofte kalt Parmaskinke?",
+            "a": "Prosciutto"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Litteratur",
+      "hint": "Bøker, forfattere og litterære verk.",
+      "questions": [
+        [
+          {
+            "q": "Hvem skrev «Harry Potter»-bøkene?",
+            "a": "J.K. Rowling"
+          },
+          {
+            "q": "Hvilket norsk eventyr handler om tre bukker som skal til seters?",
+            "a": "De tre bukkene Bruse"
+          },
+          {
+            "q": "Hvem skrev bøkene om Pippi Langstrømpe?",
+            "a": "Astrid Lindgren"
+          }
+        ],
+        [
+          {
+            "q": "Hvem skrev skuespillet «Et dukkehjem»?",
+            "a": "Henrik Ibsen"
+          },
+          {
+            "q": "Hvem skrev «Romeo og Julie»?",
+            "a": "William Shakespeare"
+          },
+          {
+            "q": "Hvem samlet inn norske folkeeventyr sammen med Jørgen Moe?",
+            "a": "Peter Christen Asbjørnsen"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken norske forfatter skrev «Sofies verden»?",
+            "a": "Jostein Gaarder"
+          },
+          {
+            "q": "Hvem skrev den norske romanen «Sult»?",
+            "a": "Knut Hamsun"
+          },
+          {
+            "q": "Hvem skrev romanen «Doktor Zhivago»?",
+            "a": "Boris Pasternak"
+          }
+        ],
+        [
+          {
+            "q": "Hvem skrev de originale «Sherlock Holmes»-bøkene?",
+            "a": "Sir Arthur Conan Doyle"
+          },
+          {
+            "q": "Hvem skrev «Ringenes Herre»?",
+            "a": "J.R.R. Tolkien"
+          },
+          {
+            "q": "Hvem skrev «1984» og «Kamerat Napoleon»?",
+            "a": "George Orwell"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken norsk forfatter mottok Nobels litteraturpris i 2023?",
+            "a": "Jon Fosse"
+          },
+          {
+            "q": "Hvem skrev «Krig og fred»?",
+            "a": "Leo Tolstoj"
+          },
+          {
+            "q": "Hvem skrev «Odysseen» og «Iliaden»?",
+            "a": "Homer"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Dyreriket",
+      "hint": "Dyr, deres egenskaper og levesett.",
+      "questions": [
+        [
+          {
+            "q": "Hva er verdens største pattedyr?",
+            "a": "Blåhval"
+          },
+          {
+            "q": "Hvor mange bein har en edderkopp?",
+            "a": "8"
+          },
+          {
+            "q": "Hvilket dyr sies å være «menneskets beste venn»?",
+            "a": "Hund"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket dyr kalles ofte «ørkenens skip»?",
+            "a": "Kamel"
+          },
+          {
+            "q": "Hvilket dyr har lengst hals av alle?",
+            "a": "Sjiraff"
+          },
+          {
+            "q": "Hvilken fugl kan ikke fly, men er verdens raskeste løper blant fugler?",
+            "a": "Struts"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket kattedyr er størst?",
+            "a": "Tiger"
+          },
+          {
+            "q": "Hvilket dyr er kjent for å endre farge for å kamuflere seg?",
+            "a": "Kameleon"
+          },
+          {
+            "q": "Hvilket dyr har svarte og hvite striper?",
+            "a": "Sebra"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange hjerter har en blekksprut?",
+            "a": "Tre"
+          },
+          {
+            "q": "Hvilket dyr sover ofte stående og klarer seg på svært lite søvn i døgnet?",
+            "a": "Elefant (eller hest)"
+          },
+          {
+            "q": "Hva er det eneste pattedyret som kan fly?",
+            "a": "Flaggermus"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket dyr regnes som verdens raskeste landdyr?",
+            "a": "Gepard"
+          },
+          {
+            "q": "Hvor mange armer har en sjøstjerne vanligvis?",
+            "a": "5"
+          },
+          {
+            "q": "Hvilket krypdyr kan miste halen og vokse den ut igjen?",
+            "a": "Øgle (firfisle)"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Teknologi",
+      "hint": "Data, internett og teknologiske nyvinninger.",
+      "questions": [
+        [
+          {
+            "q": "Hvilket selskap laget iPhone?",
+            "a": "Apple"
+          },
+          {
+            "q": "Hva kalles «hjernen» i en datamaskin?",
+            "a": "Prosessoren (CPU)"
+          },
+          {
+            "q": "Hvilket selskap eier søkemotoren Google?",
+            "a": "Alphabet"
+          }
+        ],
+        [
+          {
+            "q": "Hva står forkortelsen «WWW» for?",
+            "a": "World Wide Web"
+          },
+          {
+            "q": "Hvilket selskap lager Windows-operativsystemet?",
+            "a": "Microsoft"
+          },
+          {
+            "q": "Hva heter Elon Musks elbilselskap?",
+            "a": "Tesla"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år ble Facebook grunnlagt?",
+            "a": "2004"
+          },
+          {
+            "q": "Hvilket sosiale medium brukte opprinnelig en fugl som logo?",
+            "a": "Twitter (nå X)"
+          },
+          {
+            "q": "Hvem grunnla Amazon?",
+            "a": "Jeff Bezos"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter AI-selskapet som har laget chatboten Claude?",
+            "a": "Anthropic"
+          },
+          {
+            "q": "Hvilket selskap lager ChatGPT?",
+            "a": "OpenAI"
+          },
+          {
+            "q": "Hva står forkortelsen «AI» for?",
+            "a": "Artificial Intelligence (kunstig intelligens)"
+          }
+        ],
+        [
+          {
+            "q": "Hva kalles maskinen designet av Charles Babbage på 1800-tallet, regnet som en tidlig datamaskin?",
+            "a": "Analytical Engine (den analytiske maskinen)"
+          },
+          {
+            "q": "Hvem regnes som verdens første programmerer?",
+            "a": "Ada Lovelace"
+          },
+          {
+            "q": "Hvilket år ble den første iPhone lansert?",
+            "a": "2007"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Kunst",
+      "hint": "Malerier, kunstnere og kunstretninger.",
+      "questions": [
+        [
+          {
+            "q": "Hvem malte «Mona Lisa»?",
+            "a": "Leonardo da Vinci"
+          },
+          {
+            "q": "Hvilken norsk kunstner malte «Skrik»?",
+            "a": "Edvard Munch"
+          },
+          {
+            "q": "Hvilken farge får man ved å blande blått og gult?",
+            "a": "Grønt"
+          }
+        ],
+        [
+          {
+            "q": "Hvem malte «Stjernenatt»?",
+            "a": "Vincent van Gogh"
+          },
+          {
+            "q": "Hvilken kunstner er kjent for å ha kuttet av seg selv et øre?",
+            "a": "Vincent van Gogh"
+          },
+          {
+            "q": "Hvilken italiensk kunstner malte «Det siste måltid»?",
+            "a": "Leonardo da Vinci"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken kunstretning bruker geometriske former og er knyttet til blant andre Picasso?",
+            "a": "Kubisme"
+          },
+          {
+            "q": "Hvilken kunstretning fokuserer på drømmer og det underbevisste, med Salvador Dalí som kjent utøver?",
+            "a": "Surrealisme"
+          },
+          {
+            "q": "Hvilken kunstretning bruker synlige penselstrøk og fanger lys og øyeblikk, med Monet som pioner?",
+            "a": "Impresjonisme"
+          }
+        ],
+        [
+          {
+            "q": "I hvilket kapell i Vatikanet finner vi Michelangelos berømte takmalerier?",
+            "a": "Det sixtinske kapell"
+          },
+          {
+            "q": "Hvilken skulptur av en naken mann laget Michelangelo, som står i Firenze?",
+            "a": "David"
+          },
+          {
+            "q": "Hvilket museum i Paris huser Mona Lisa?",
+            "a": "Louvre"
+          }
+        ],
+        [
+          {
+            "q": "Hvem malte det norske maleriet «Brudeferd i Hardanger»?",
+            "a": "Adolph Tidemand og Hans Gude"
+          },
+          {
+            "q": "Hvilken nederlandsk kunstner er kjent for «Jenta med perleøredobb»?",
+            "a": "Johannes Vermeer"
+          },
+          {
+            "q": "Hvem designet kuppelen på Firenze-katedralen under renessansen?",
+            "a": "Filippo Brunelleschi"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Norge",
+      "hint": "Norsk geografi, historie og kultur.",
+      "questions": [
+        [
+          {
+            "q": "Hva heter Norges hovedstad?",
+            "a": "Oslo"
+          },
+          {
+            "q": "Hva heter den norske kongen (per 2026)?",
+            "a": "Kong Harald V"
+          },
+          {
+            "q": "Hvilken norsk by er kjent for Bryggen og Fisketorget?",
+            "a": "Bergen"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket fjell er høyest i Norge?",
+            "a": "Galdhøpiggen"
+          },
+          {
+            "q": "Hvilken norsk by kalles ofte «oljehovedstaden»?",
+            "a": "Stavanger"
+          },
+          {
+            "q": "Hvilken dato er den norske nasjonaldagen?",
+            "a": "17. mai"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken norsk by er kjent som «de syv fjells by»?",
+            "a": "Bergen"
+          },
+          {
+            "q": "Hva heter den lengste veitunnelen i Norge?",
+            "a": "Lærdalstunnelen"
+          },
+          {
+            "q": "Hvilket norsk fylke ligger lengst nord?",
+            "a": "Troms og Finnmark (Finnmark)"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år ble Grunnloven signert på Eidsvoll?",
+            "a": "1814"
+          },
+          {
+            "q": "Hvilket år ble den store oljefunnen Ekofisk gjort på norsk sokkel?",
+            "a": "1969"
+          },
+          {
+            "q": "Hvilket år ble Norge medlem av NATO?",
+            "a": "1949"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Norges lengste fjord?",
+            "a": "Sognefjorden"
+          },
+          {
+            "q": "Hva heter den norske øygruppen langt nord i Arktis?",
+            "a": "Svalbard"
+          },
+          {
+            "q": "Hva heter Norges nest største by?",
+            "a": "Bergen"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Ord som ender på «-ER»",
+      "hint": "Svaret på hvert spørsmål skal ende med bokstavene E-R.",
+      "questions": [
+        [
+          {
+            "q": "Et yrke som lager og reparerer møbler i tre",
+            "a": "Snekker"
+          },
+          {
+            "q": "Et yrke som steller hager og klipper gress",
+            "a": "Gartner"
+          },
+          {
+            "q": "Et dyr som er kjent for å bygge demninger av trær",
+            "a": "Bever"
+          }
+        ],
+        [
+          {
+            "q": "Et yrke som selger kjøtt i en butikk",
+            "a": "Slakter"
+          },
+          {
+            "q": "En person som fisker for å tjene til livets opphold",
+            "a": "Fisker"
+          },
+          {
+            "q": "En person som baker brød og kaker",
+            "a": "Baker"
+          }
+        ],
+        [
+          {
+            "q": "En person som deltar i en fotballkamp",
+            "a": "Spiller"
+          },
+          {
+            "q": "En person som maler hus og vegger",
+            "a": "Maler"
+          },
+          {
+            "q": "En person med ansvar for å styre en gruppe mennesker",
+            "a": "Leder"
+          }
+        ],
+        [
+          {
+            "q": "En person som underviser elever på skolen",
+            "a": "Lærer"
+          },
+          {
+            "q": "En person som skriver kode til dataprogrammer",
+            "a": "Programmerer"
+          },
+          {
+            "q": "En person som spiller et instrument profesjonelt i et orkester",
+            "a": "Musiker"
+          }
+        ],
+        [
+          {
+            "q": "En person som styrer et fly",
+            "a": "Flyger"
+          },
+          {
+            "q": "En person som finner opp nye ting",
+            "a": "Oppfinner"
+          },
+          {
+            "q": "En person som reparerer biler og maskiner",
+            "a": "Mekaniker"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Emoji-gåter (gjett filmen)",
+      "hint": "Gjett filmtittelen ut fra emojiene.",
+      "questions": [
+        [
+          {
+            "q": "🦁👑",
+            "a": "Løvenes konge"
+          },
+          {
+            "q": "🕷️🧑",
+            "a": "Spider-Man"
+          },
+          {
+            "q": "🐠🔍",
+            "a": "Finding Nemo (I havet er alle like)"
+          }
+        ],
+        [
+          {
+            "q": "❄️👸⛄",
+            "a": "Frost"
+          },
+          {
+            "q": "🚢🧊💔",
+            "a": "Titanic"
+          },
+          {
+            "q": "🦖🏝️",
+            "a": "Jurassic Park"
+          }
+        ],
+        [
+          {
+            "q": "🦈🌊",
+            "a": "Haisommer (Jaws)"
+          },
+          {
+            "q": "👻🚫",
+            "a": "Ghostbusters"
+          },
+          {
+            "q": "🧙‍♂️💍🌋",
+            "a": "Ringenes Herre"
+          }
+        ],
+        [
+          {
+            "q": "🤖❤️🌱",
+            "a": "WALL-E"
+          },
+          {
+            "q": "🧟‍♂️🌍",
+            "a": "World War Z"
+          },
+          {
+            "q": "🕰️🚗⚡",
+            "a": "Tilbake til fremtiden"
+          }
+        ],
+        [
+          {
+            "q": "🐢🥷🍕",
+            "a": "Teenage Mutant Ninja Turtles"
+          },
+          {
+            "q": "🎪🦁🎩",
+            "a": "The Greatest Showman"
+          },
+          {
+            "q": "🧠💭🌀",
+            "a": "Inception"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Fullfør ordtaket",
+      "hint": "Fullfør det kjente norske ordtaket eller uttrykket.",
+      "questions": [
+        [
+          {
+            "q": "Den som ler sist, ler ___",
+            "a": "best"
+          },
+          {
+            "q": "Bedre sent enn ___",
+            "a": "aldri"
+          },
+          {
+            "q": "Alle gode ting er ___",
+            "a": "tre"
+          }
+        ],
+        [
+          {
+            "q": "Ute av syne, ute av ___",
+            "a": "sinn"
+          },
+          {
+            "q": "Det er ingen som er så gammel at han ikke kan ___",
+            "a": "lære"
+          },
+          {
+            "q": "Den som intet våger, intet ___",
+            "a": "vinner"
+          }
+        ],
+        [
+          {
+            "q": "Man skal ikke skue hunden på ___",
+            "a": "hårene"
+          },
+          {
+            "q": "Man skal ikke selge skinnet før bjørnen er ___",
+            "a": "skutt"
+          },
+          {
+            "q": "Det er ikke gull alt som ___",
+            "a": "glimrer"
+          }
+        ],
+        [
+          {
+            "q": "Øvelse gjør ___",
+            "a": "mester"
+          },
+          {
+            "q": "Nød lærer naken kvinne å ___",
+            "a": "spinne"
+          },
+          {
+            "q": "Enhver er sin egen lykkes ___",
+            "a": "smed"
+          }
+        ],
+        [
+          {
+            "q": "Den som graver en grav for andre, faller ofte selv ___",
+            "a": "i den"
+          },
+          {
+            "q": "Morgenstund har ___ i munn",
+            "a": "gull"
+          },
+          {
+            "q": "Man skal ikke kaste stein når man selv bor i ___",
+            "a": "glasshus"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Kjendisenes ekte navn",
+      "hint": "Hvem skjuler seg bak kunstnernavnet?",
+      "questions": [
+        [
+          {
+            "q": "Hvem er kunstnernavnet til Stefani Germanotta?",
+            "a": "Lady Gaga"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Marshall Mathers?",
+            "a": "Eminem"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Onika Maraj?",
+            "a": "Nicki Minaj"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er kunstnernavnet til Robyn Fenty?",
+            "a": "Rihanna"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Katheryn Hudson?",
+            "a": "Katy Perry"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Thomas Pentz?",
+            "a": "Diplo"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er kunstnernavnet til Farrokh Bulsara?",
+            "a": "Freddie Mercury"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Robert Zimmerman?",
+            "a": "Bob Dylan"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Declan MacManus?",
+            "a": "Elvis Costello"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er kunstnernavnet til Reginald Dwight?",
+            "a": "Elton John"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Paul Hewson?",
+            "a": "Bono (fra U2)"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Georgios Panayiotou?",
+            "a": "George Michael"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er kunstnernavnet til Curtis Jackson?",
+            "a": "50 Cent"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Shawn Corey Carter?",
+            "a": "Jay-Z"
+          },
+          {
+            "q": "Hvem er kunstnernavnet til Alecia Moore?",
+            "a": "P!nk"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Hovedsteder du kanskje har glemt",
+      "hint": "Litt vanskeligere hovedsteder enn de mest kjente.",
+      "questions": [
+        [
+          {
+            "q": "Hovedstaden i Canada?",
+            "a": "Ottawa"
+          },
+          {
+            "q": "Hovedstaden i Brasil?",
+            "a": "Brasília"
+          },
+          {
+            "q": "Hovedstaden i Egypt?",
+            "a": "Kairo"
+          }
+        ],
+        [
+          {
+            "q": "Hovedstaden i Australia?",
+            "a": "Canberra"
+          },
+          {
+            "q": "En av Sør-Afrikas tre hovedsteder?",
+            "a": "Pretoria, Cape Town eller Bloemfontein"
+          },
+          {
+            "q": "Hovedstaden i Tyrkia?",
+            "a": "Ankara"
+          }
+        ],
+        [
+          {
+            "q": "Hovedstaden i Sveits?",
+            "a": "Bern"
+          },
+          {
+            "q": "Hovedstaden i Marokko?",
+            "a": "Rabat"
+          },
+          {
+            "q": "Hovedstaden i Vietnam?",
+            "a": "Hanoi"
+          }
+        ],
+        [
+          {
+            "q": "Hovedstaden i New Zealand?",
+            "a": "Wellington"
+          },
+          {
+            "q": "Hovedstaden i Myanmar?",
+            "a": "Naypyidaw"
+          },
+          {
+            "q": "Hovedstaden i Sri Lanka?",
+            "a": "Sri Jayawardenepura Kotte"
+          }
+        ],
+        [
+          {
+            "q": "Hovedstaden i Kasakhstan?",
+            "a": "Astana"
+          },
+          {
+            "q": "Den administrative hovedstaden i Bolivia?",
+            "a": "La Paz"
+          },
+          {
+            "q": "Hovedstaden i Bhutan?",
+            "a": "Thimphu"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Norsk slang",
+      "hint": "Hva betyr det norske slanguttrykket?",
+      "questions": [
+        [
+          {
+            "q": "Hva betyr det når noe er «kult»?",
+            "a": "Bra/tøft"
+          },
+          {
+            "q": "Hva betyr det å «henge» med noen?",
+            "a": "Å tilbringe tid sammen"
+          },
+          {
+            "q": "Hva betyr det at noe er «digg»?",
+            "a": "At noe er godt/deilig"
+          }
+        ],
+        [
+          {
+            "q": "Hva betyr «å være på hugget»?",
+            "a": "Å være ivrig og klar for handling"
+          },
+          {
+            "q": "Hva betyr «å svinge seg»?",
+            "a": "Å danse eller opptre bra"
+          },
+          {
+            "q": "Hva betyr «å chille»?",
+            "a": "Å slappe av"
+          }
+        ],
+        [
+          {
+            "q": "Hva betyr «å gå på limpinnen»?",
+            "a": "Å bli lurt"
+          },
+          {
+            "q": "Hva betyr «å drite seg ut»?",
+            "a": "Å gjøre en pinlig feil offentlig"
+          },
+          {
+            "q": "Hva betyr det å være en «gladlaks»?",
+            "a": "Å være en veldig glad/optimistisk person"
+          }
+        ],
+        [
+          {
+            "q": "Hva betyr «å ha bein i nesa»?",
+            "a": "Å være bestemt og stå på sitt"
+          },
+          {
+            "q": "Hva betyr «å snakke rett fra leveren»?",
+            "a": "Å si det man mener uten omsvøp"
+          },
+          {
+            "q": "Hva betyr «å være i skvis»?",
+            "a": "Å være i en vanskelig situasjon"
+          }
+        ],
+        [
+          {
+            "q": "Hva betyr «å være i vinden»?",
+            "a": "Å være populær akkurat nå"
+          },
+          {
+            "q": "Hva betyr det norske uttrykket «å tape ansikt»?",
+            "a": "Å bli ydmyket/miste respekt"
+          },
+          {
+            "q": "Hva betyr «å være på bærtur»?",
+            "a": "Å ta grundig feil/være helt på jordet"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Rim på meg",
+      "hint": "Svar med et ord som rimer på det oppgitte ordet. Verten godkjenner alle ord som rimer.",
+      "questions": [
+        [
+          {
+            "q": "Nevn et ord som rimer på «katt»",
+            "a": "F.eks. hatt, matt, ratt"
+          },
+          {
+            "q": "Nevn et ord som rimer på «sol»",
+            "a": "F.eks. kul, skole, pol"
+          },
+          {
+            "q": "Nevn et ord som rimer på «bok»",
+            "a": "F.eks. kok, lokk, sokk"
+          }
+        ],
+        [
+          {
+            "q": "Nevn et ord som rimer på «bil»",
+            "a": "F.eks. fil, stil, mil"
+          },
+          {
+            "q": "Nevn et ord som rimer på «hund»",
+            "a": "F.eks. munn, stund, rund"
+          },
+          {
+            "q": "Nevn et ord som rimer på «stol»",
+            "a": "F.eks. mol, kul, pol"
+          }
+        ],
+        [
+          {
+            "q": "Nevn et ord som rimer på «hus»",
+            "a": "F.eks. mus, lus, grus"
+          },
+          {
+            "q": "Nevn et ord som rimer på «dag»",
+            "a": "F.eks. tak, sak, lag"
+          },
+          {
+            "q": "Nevn et ord som rimer på «vann»",
+            "a": "F.eks. mann, kan, plan"
+          }
+        ],
+        [
+          {
+            "q": "Nevn et ord som rimer på «tog»",
+            "a": "F.eks. skog, sprog"
+          },
+          {
+            "q": "Nevn et ord som rimer på «snø»",
+            "a": "F.eks. sjø, trø, klø"
+          },
+          {
+            "q": "Nevn et ord som rimer på «fjell»",
+            "a": "F.eks. kjeller, sel, hell"
+          }
+        ],
+        [
+          {
+            "q": "Nevn et ord som rimer på «måne»",
+            "a": "F.eks. låne, våne"
+          },
+          {
+            "q": "Nevn et ord som rimer på «kaffe»",
+            "a": "F.eks. straffe, avskaffe"
+          },
+          {
+            "q": "Nevn et ord som rimer på «historie»",
+            "a": "F.eks. teori, kategori"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Superhelter og hemmelig identitet",
+      "hint": "Hvem er personen bak superheltdrakten?",
+      "questions": [
+        [
+          {
+            "q": "Hvem er Superman i det virkelige liv?",
+            "a": "Clark Kent"
+          },
+          {
+            "q": "Hvem er Batman i det virkelige liv?",
+            "a": "Bruce Wayne"
+          },
+          {
+            "q": "Hvem er Spider-Man i det virkelige liv?",
+            "a": "Peter Parker"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er Iron Man i det virkelige liv?",
+            "a": "Tony Stark"
+          },
+          {
+            "q": "Hvem er Wonder Woman i det virkelige liv?",
+            "a": "Diana Prince"
+          },
+          {
+            "q": "Hvem er Hulk i det virkelige liv?",
+            "a": "Bruce Banner"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er Black Widow i det virkelige liv?",
+            "a": "Natasha Romanoff"
+          },
+          {
+            "q": "Hvem er Captain America i det virkelige liv?",
+            "a": "Steve Rogers"
+          },
+          {
+            "q": "Hvem er Nightwing (tidligere Robin) i det virkelige liv?",
+            "a": "Dick Grayson"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er Catwoman i det virkelige liv?",
+            "a": "Selina Kyle"
+          },
+          {
+            "q": "Hvem er Deadpool i det virkelige liv?",
+            "a": "Wade Wilson"
+          },
+          {
+            "q": "Hvem er Daredevil i det virkelige liv?",
+            "a": "Matt Murdock"
+          }
+        ],
+        [
+          {
+            "q": "Hvem er Green Lantern (i sin mest kjente versjon) i det virkelige liv?",
+            "a": "Hal Jordan"
+          },
+          {
+            "q": "Hvem er Doctor Strange i det virkelige liv?",
+            "a": "Stephen Strange"
+          },
+          {
+            "q": "Hvem er Aquaman i det virkelige liv?",
+            "a": "Arthur Curry"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Tall og rekorder",
+      "hint": "Spørsmål som involverer tall og mengder.",
+      "questions": [
+        [
+          {
+            "q": "Hvor mange strenger har en standard gitar?",
+            "a": "6"
+          },
+          {
+            "q": "Hvor mange dager har et vanlig år?",
+            "a": "365"
+          },
+          {
+            "q": "Hvor mange måneder har et år?",
+            "a": "12"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange bein har et insekt?",
+            "a": "6"
+          },
+          {
+            "q": "Hvor mange sider har en terning?",
+            "a": "6"
+          },
+          {
+            "q": "Hvor mange kontinenter er det i verden?",
+            "a": "7"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange land grenser Norge til?",
+            "a": "3 (Sverige, Finland og Russland)"
+          },
+          {
+            "q": "Hvor mange strenger har en fiolin?",
+            "a": "4"
+          },
+          {
+            "q": "Hvor mange spillere er det i et volleyballag på banen?",
+            "a": "6"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange bein er det i en voksen menneskekropp?",
+            "a": "206"
+          },
+          {
+            "q": "Hvor mange «hjerter» har en meitemark omtrent?",
+            "a": "5 par"
+          },
+          {
+            "q": "Hvor mange tommer er en fot (lengdemål)?",
+            "a": "12"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange tenner har et voksent menneske normalt?",
+            "a": "32"
+          },
+          {
+            "q": "Hvor mange bein har en krabbe vanligvis?",
+            "a": "10"
+          },
+          {
+            "q": "Hvor mange strenger har en konsertharpe omtrent?",
+            "a": "Rundt 47"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Flaggenes fest",
+      "hint": "Gjett landet ut fra beskrivelsen av flagget.",
+      "questions": [
+        [
+          {
+            "q": "Hvilket lands flagg har et rødt, hvitt og blått kors?",
+            "a": "Norge"
+          },
+          {
+            "q": "Hvilket lands flagg har stjerner og striper?",
+            "a": "USA"
+          },
+          {
+            "q": "Hvilket lands flagg er helt rødt med en hvit sirkel?",
+            "a": "Japan"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket lands flagg har en rød sirkel på hvit bunn?",
+            "a": "Japan"
+          },
+          {
+            "q": "Hvilket lands flagg har et rødt lønneblad i midten?",
+            "a": "Canada"
+          },
+          {
+            "q": "Hvilket lands flagg er rødt, hvitt og grønt med en ørn i midten?",
+            "a": "Mexico"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket lands flagg har grønne, hvite og oransje striper?",
+            "a": "India"
+          },
+          {
+            "q": "Hvilket lands flagg er rødt med en grønn femtakket stjerne?",
+            "a": "Marokko"
+          },
+          {
+            "q": "Hvilket lands flagg har tre horisontale striper: svart, rødt og gult?",
+            "a": "Tyskland"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket land har verdens eneste flagg som ikke er rektangulært?",
+            "a": "Nepal"
+          },
+          {
+            "q": "Hvilket lands flagg har et gult hjul (Ashoka Chakra) i midten?",
+            "a": "India"
+          },
+          {
+            "q": "Hvilket lands flagg har en drage avbildet?",
+            "a": "Bhutan"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket lands flagg regnes som verdens eldste flaggdesign i bruk (siden 1219)?",
+            "a": "Danmark"
+          },
+          {
+            "q": "Hvilket lands flagg inneholder et avbildet gevær (AK-47)?",
+            "a": "Mosambik"
+          },
+          {
+            "q": "Hvilket lands flagg har et sverd og en trosbekjennelse i arabisk skrift?",
+            "a": "Saudi-Arabia"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Film-sitater",
+      "hint": "Hvilken film er det berømte sitatet fra?",
+      "questions": [
+        [
+          {
+            "q": "«May the Force be with you» er fra hvilken filmserie?",
+            "a": "Star Wars"
+          },
+          {
+            "q": "«To infinity and beyond!» sies av hvilken tegnefilmfigur?",
+            "a": "Buzz Lightyear (Toy Story)"
+          },
+          {
+            "q": "«Hakuna Matata» er fra hvilken Disney-film?",
+            "a": "Løvenes konge"
+          }
+        ],
+        [
+          {
+            "q": "«I'll be back» er et kjent sitat fra hvilken film?",
+            "a": "Terminator"
+          },
+          {
+            "q": "«Houston, we have a problem» er fra hvilken film?",
+            "a": "Apollo 13"
+          },
+          {
+            "q": "«You can't handle the truth!» er fra hvilken film?",
+            "a": "A Few Good Men"
+          }
+        ],
+        [
+          {
+            "q": "«Here's looking at you, kid» er fra hvilken film?",
+            "a": "Casablanca"
+          },
+          {
+            "q": "«I see dead people» er fra hvilken film?",
+            "a": "The Sixth Sense"
+          },
+          {
+            "q": "«Say hello to my little friend!» er fra hvilken film?",
+            "a": "Scarface"
+          }
+        ],
+        [
+          {
+            "q": "«Why so serious?» sies av hvilken karakter?",
+            "a": "Jokeren (The Dark Knight)"
+          },
+          {
+            "q": "«There's no place like home» er fra hvilken klassiske film?",
+            "a": "The Wizard of Oz"
+          },
+          {
+            "q": "«My precious» er et kjent sitat fra hvilken filmserie?",
+            "a": "Ringenes Herre (Gollum)"
+          }
+        ],
+        [
+          {
+            "q": "«I am inevitable» er fra hvilken film?",
+            "a": "Avengers: Endgame"
+          },
+          {
+            "q": "«Bond. James Bond.» er et signatursitat fra hvilken filmserie?",
+            "a": "James Bond"
+          },
+          {
+            "q": "«Life is like a box of chocolates» er fra hvilken film?",
+            "a": "Forrest Gump"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Ekte ord eller oppspinn?",
+      "hint": "Er ordet et ekte norsk ord, eller er det diktet opp?",
+      "questions": [
+        [
+          {
+            "q": "Er «ovnspjeld» et ekte norsk ord?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «brøddoktor» et ekte norsk ord?",
+            "a": "Nei, oppspinn"
+          },
+          {
+            "q": "Er «skoheng» et ekte norsk ord?",
+            "a": "Nei, oppspinn"
+          }
+        ],
+        [
+          {
+            "q": "Er «kveldsmatlei» et ekte norsk ord?",
+            "a": "Nei, oppspinn"
+          },
+          {
+            "q": "Er «formiddagskaffe» et ekte norsk ord?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «vinterkos» et vanlig brukt norsk uttrykk?",
+            "a": "Ja"
+          }
+        ],
+        [
+          {
+            "q": "Er «bakvendtland» et kjent uttrykk fra norske fortellinger?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «harepine» et ekte norsk ord?",
+            "a": "Nei, oppspinn"
+          },
+          {
+            "q": "Er «gubbesuppe» et ekte norsk ord?",
+            "a": "Nei, oppspinn"
+          }
+        ],
+        [
+          {
+            "q": "Er «tussmørke» et ekte norsk ord som betyr skumring?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «kråkesølv» et ekte norsk ord for glimmer?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «flatlus» et ekte norsk ord for et insekt?",
+            "a": "Ja"
+          }
+        ],
+        [
+          {
+            "q": "Er «ugler i mosen» et kjent norsk uttrykk som betyr at noe er mistenkelig?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «kattepine» et ekte norsk ord som betyr en vanskelig situasjon?",
+            "a": "Ja"
+          },
+          {
+            "q": "Er «steikjaevel» et offisielt oppslagsord i norske ordbøker?",
+            "a": "Nei, det er et dialektuttrykk"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Verdensrekorder og ekstremer",
+      "hint": "Det største, minste, raskeste eller høyeste i verden.",
+      "questions": [
+        [
+          {
+            "q": "Hva er verdens høyeste fjell?",
+            "a": "Mount Everest"
+          },
+          {
+            "q": "Hva er verdens største hav?",
+            "a": "Stillehavet"
+          },
+          {
+            "q": "Hva er verdens største land i areal?",
+            "a": "Russland"
+          }
+        ],
+        [
+          {
+            "q": "Hva er verdens lengste elv?",
+            "a": "Nilen"
+          },
+          {
+            "q": "Hva er verdens største varme ørken?",
+            "a": "Sahara"
+          },
+          {
+            "q": "Hva er verdens høyeste bygning?",
+            "a": "Burj Khalifa"
+          }
+        ],
+        [
+          {
+            "q": "Hva er verdens minste land?",
+            "a": "Vatikanstaten"
+          },
+          {
+            "q": "Hva er verdens største øy?",
+            "a": "Grønland"
+          },
+          {
+            "q": "Hva er verdens dypeste innsjø?",
+            "a": "Bajkalsjøen"
+          }
+        ],
+        [
+          {
+            "q": "Hvem har den offisielle rekorden som verdens raskeste mann på 100 meter?",
+            "a": "Usain Bolt"
+          },
+          {
+            "q": "Hva er den høyeste temperaturen som noen gang er offisielt registrert på jorden?",
+            "a": "Ca. 56,7 °C (Death Valley)"
+          },
+          {
+            "q": "Hvilke to land deler verdens lengste landegrense?",
+            "a": "USA og Canada"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter verdens dypeste punkt i havet?",
+            "a": "Marianergropen"
+          },
+          {
+            "q": "Hva er det høyeste fossefallet i verden?",
+            "a": "Angelfossen (Venezuela)"
+          },
+          {
+            "q": "Hvilket dyr regnes som det største som noensinne har levd på jorden?",
+            "a": "Blåhvalen"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Barndommens tegnefilmer",
+      "hint": "Kjente tegnefilmer og animerte serier.",
+      "questions": [
+        [
+          {
+            "q": "Hvilken tegnefilm handler om en svamp som bor i en ananas under havet?",
+            "a": "SvampeBob Firkant"
+          },
+          {
+            "q": "Hvilken Disney-film handler om en løveunge som blir konge av Pride Rock?",
+            "a": "Løvenes konge"
+          },
+          {
+            "q": "Hvilken tegnefilmfamilie er gul og bor i Springfield?",
+            "a": "Simpson-familien"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken tegnefilmfamilie bor på Evergreen Terrace 742?",
+            "a": "Simpson-familien"
+          },
+          {
+            "q": "Hva heter det blå pinnsvinet som løper superraskt?",
+            "a": "Sonic"
+          },
+          {
+            "q": "Hvilken Disney/Pixar-film handler om en fisk som leter etter sønnen sin?",
+            "a": "Finding Nemo (I havet er alle like)"
+          }
+        ],
+        [
+          {
+            "q": "I hvilken tegnefilm jakter en kojote evig forgjeves på en fugl i ørkenen?",
+            "a": "Wile E. Coyote og Road Runner"
+          },
+          {
+            "q": "Hvilken tegnefilmkatt jager konstant en mus ved navn Jerry?",
+            "a": "Tom"
+          },
+          {
+            "q": "Hva heter den grønne ogeren fra DreamWorks-filmene?",
+            "a": "Shrek"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter de små gule, sylinderformede figurene fra «Despicable Me»-filmene?",
+            "a": "Minions"
+          },
+          {
+            "q": "Hva heter sjøstjernen som er bestevenn med SvampeBob?",
+            "a": "Patrick"
+          },
+          {
+            "q": "Hvilken Disney-prinsesse har svært langt gyllent hår og bor i et tårn?",
+            "a": "Rapunzel"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken japansk animasjonsstudio har laget filmer som «Chihiro og heksene» og «Min nabo Totoro»?",
+            "a": "Studio Ghibli"
+          },
+          {
+            "q": "Hva heter tegneseriehunden som er Mikke Mus sitt kjæledyr?",
+            "a": "Pluto"
+          },
+          {
+            "q": "Hvilken klassiske Disney-film fra 1940 inneholder klassisk musikk og dansende flodhester?",
+            "a": "Fantasia"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Matematikk-gåter",
+      "hint": "Enkle regnestykker og tallgåter.",
+      "questions": [
+        [
+          {
+            "q": "Hva er 12 + 13?",
+            "a": "25"
+          },
+          {
+            "q": "Hva er 7 x 6?",
+            "a": "42"
+          },
+          {
+            "q": "Hva er 100 - 37?",
+            "a": "63"
+          }
+        ],
+        [
+          {
+            "q": "Hva er 9 x 8?",
+            "a": "72"
+          },
+          {
+            "q": "Hva er 15 x 4?",
+            "a": "60"
+          },
+          {
+            "q": "Hva er 144 delt på 12?",
+            "a": "12"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange sider har en sekskant?",
+            "a": "6"
+          },
+          {
+            "q": "Hvor mange grader er en rett vinkel?",
+            "a": "90"
+          },
+          {
+            "q": "Hvor mange sider har en åttekant?",
+            "a": "8"
+          }
+        ],
+        [
+          {
+            "q": "Hva er kvadratroten av 144?",
+            "a": "12"
+          },
+          {
+            "q": "Hva er kvadratroten av 81?",
+            "a": "9"
+          },
+          {
+            "q": "Hva er 2 opphøyd i 5. potens (2^5)?",
+            "a": "32"
+          }
+        ],
+        [
+          {
+            "q": "Hva er summen av vinklene i en trekant?",
+            "a": "180 grader"
+          },
+          {
+            "q": "Hva er de tre første primtallene?",
+            "a": "2, 3 og 5"
+          },
+          {
+            "q": "Hva er verdien av pi avrundet til to desimaler?",
+            "a": "3,14"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Verdensrommet",
+      "hint": "Planeter, stjerner og romfart.",
+      "questions": [
+        [
+          {
+            "q": "Hvilken planet kalles «den røde planeten»?",
+            "a": "Mars"
+          },
+          {
+            "q": "Hvilken stjerne er nærmest jorda?",
+            "a": "Solen"
+          },
+          {
+            "q": "Hvilken planet er størst i solsystemet?",
+            "a": "Jupiter"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken planet er kjent for sine tydelige ringer?",
+            "a": "Saturn"
+          },
+          {
+            "q": "Hvem var det første mennesket i verdensrommet (1961)?",
+            "a": "Jurij Gagarin"
+          },
+          {
+            "q": "Hvem var det første mennesket som gikk på månen?",
+            "a": "Neil Armstrong"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter galaksen vår?",
+            "a": "Melkeveien"
+          },
+          {
+            "q": "Hvilken planet er nærmest solen?",
+            "a": "Merkur"
+          },
+          {
+            "q": "Hva heter den amerikanske romfartsorganisasjonen?",
+            "a": "NASA"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken planet ligger nesten helt på siden i banen sin rundt solen?",
+            "a": "Uranus"
+          },
+          {
+            "q": "Hva heter Jupiters største måne?",
+            "a": "Ganymedes"
+          },
+          {
+            "q": "Omtrent hvor lang tid bruker lyset fra solen til jorda?",
+            "a": "Ca. 8 minutter"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Saturns største måne?",
+            "a": "Titan"
+          },
+          {
+            "q": "Hvilken planet er varmest i solsystemet?",
+            "a": "Venus"
+          },
+          {
+            "q": "Hva heter romteleskopet som ble sendt opp i 1990, oppkalt etter en astronom?",
+            "a": "Hubble"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Kroppen",
+      "hint": "Organer, bein og hvordan kroppen fungerer.",
+      "questions": [
+        [
+          {
+            "q": "Hvilket organ pumper blod rundt i kroppen?",
+            "a": "Hjertet"
+          },
+          {
+            "q": "Hvor mange sanser regner vi vanligvis at mennesket har?",
+            "a": "5"
+          },
+          {
+            "q": "Hvilket organ bruker vi til å puste med?",
+            "a": "Lungene"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter det lengste beinet i kroppen?",
+            "a": "Lårbeinet"
+          },
+          {
+            "q": "Hvilke organer renser blodet og lager urin?",
+            "a": "Nyrene"
+          },
+          {
+            "q": "Hvor mange melketenner har et barn normalt?",
+            "a": "20"
+          }
+        ],
+        [
+          {
+            "q": "Hva er kroppens største organ?",
+            "a": "Huden"
+          },
+          {
+            "q": "Hva heter stoffet som gir huden farge?",
+            "a": "Melanin"
+          },
+          {
+            "q": "Hvilket vitamin lager kroppen ved hjelp av sollys?",
+            "a": "D-vitamin"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange kamre har hjertet?",
+            "a": "4"
+          },
+          {
+            "q": "Hva heter det minste beinet i kroppen (ligger i øret)?",
+            "a": "Stigbøylen"
+          },
+          {
+            "q": "Hvilke blodceller frakter oksygen?",
+            "a": "De røde blodcellene"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter hormonet som regulerer blodsukkeret?",
+            "a": "Insulin"
+          },
+          {
+            "q": "Hvilken del av hjernen styrer balansen?",
+            "a": "Lillehjernen"
+          },
+          {
+            "q": "Hvilken blodtype regnes som universell giver for røde blodceller?",
+            "a": "O negativ"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Norsk historie",
+      "hint": "Hendelser og personer fra Norges fortid.",
+      "questions": [
+        [
+          {
+            "q": "Hva kalles perioden med vikingtokt, omtrent år 800–1050?",
+            "a": "Vikingtiden"
+          },
+          {
+            "q": "Hvilket år ble Norge okkupert av Tyskland?",
+            "a": "1940"
+          },
+          {
+            "q": "Hva heter kronprinsen i Norge?",
+            "a": "Haakon (Haakon Magnus)"
+          }
+        ],
+        [
+          {
+            "q": "Hvem ble Norges første konge etter unionsoppløsningen i 1905?",
+            "a": "Haakon VII"
+          },
+          {
+            "q": "Hvem regnes som kongen som samlet Norge til ett rike (Hafrsfjord, ca. 872)?",
+            "a": "Harald Hårfagre"
+          },
+          {
+            "q": "Hvilken dato feirer vi at krigen sluttet i Norge?",
+            "a": "8. mai"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år fikk norske kvinner alminnelig stemmerett?",
+            "a": "1913"
+          },
+          {
+            "q": "Hvilket år sto slaget ved Stiklestad?",
+            "a": "1030"
+          },
+          {
+            "q": "Hvilken norsk polfarer var først til Sydpolen?",
+            "a": "Roald Amundsen"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år nådde Roald Amundsen Sydpolen?",
+            "a": "1911"
+          },
+          {
+            "q": "Hva het skipet Amundsen brukte på Sydpolsekspedisjonen?",
+            "a": "Fram"
+          },
+          {
+            "q": "Hvem var Norges første statsminister (1873)?",
+            "a": "Frederik Stang"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år ble Nobels fredspris delt ut for første gang?",
+            "a": "1901"
+          },
+          {
+            "q": "Hvilket år sa nordmenn nei til EU-medlemskap for andre gang?",
+            "a": "1994"
+          },
+          {
+            "q": "Hvilket år åpnet Oslo lufthavn Gardermoen?",
+            "a": "1998"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Norsk mat",
+      "hint": "Tradisjonell norsk mat og drikke.",
+      "questions": [
+        [
+          {
+            "q": "Hva heter den norske nasjonalretten laget av lam og kål?",
+            "a": "Fårikål"
+          },
+          {
+            "q": "Hva heter det tynne potetbrødet man ofte spiser pølse i?",
+            "a": "Lompe"
+          },
+          {
+            "q": "Hvilken julemat fra grisen er mest vanlig på Østlandet?",
+            "a": "Ribbe"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter det salte, tørkede lammekjøttet som er julemat på Vestlandet?",
+            "a": "Pinnekjøtt"
+          },
+          {
+            "q": "Hva heter de sprø, kjegleformede kakene man spiser til jul?",
+            "a": "Krumkaker"
+          },
+          {
+            "q": "Hva kalles fisken som har ligget i lake i flere uker før den spises?",
+            "a": "Rakfisk"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter det tynne, myke brødet som rulles med smør og sukker?",
+            "a": "Lefse"
+          },
+          {
+            "q": "Hvilket dyr kommer geitost fra?",
+            "a": "Geita"
+          },
+          {
+            "q": "Hva er hovedingrediensen (sammen med mel) i rømmegrøt?",
+            "a": "Rømme"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket dyr kommer pinnekjøtt fra?",
+            "a": "Sau (lam)"
+          },
+          {
+            "q": "Hva kalles fisk som tørkes på hjell i Lofoten?",
+            "a": "Tørrfisk"
+          },
+          {
+            "q": "Hvilke fisker brukes tradisjonelt til rakfisk?",
+            "a": "Ørret (og røye)"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken linje krysser Lysholm Linie Aquavit på skip, som gir den navnet?",
+            "a": "Ekvator"
+          },
+          {
+            "q": "Hva heter den norske julegrøten som skjuler en mandel?",
+            "a": "Risengrynsgrøt"
+          },
+          {
+            "q": "Hva er lutefisk laget av før den legges i lut?",
+            "a": "Tørrfisk (torsk)"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Harry Potter",
+      "hint": "Bøkene og filmene om trollmannsgutten.",
+      "questions": [
+        [
+          {
+            "q": "Hvilket elevhus går Harry i på Galtvort (Hogwarts)?",
+            "a": "Griffing (Gryffindor)"
+          },
+          {
+            "q": "Hva heter Harrys snøugle?",
+            "a": "Hedwig"
+          },
+          {
+            "q": "Hva heter rektoren på Galtvort i de første bøkene?",
+            "a": "Albus Humlesnurr (Dumbledore)"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Harrys to nærmeste venner?",
+            "a": "Ron Weasley og Hermione Granger"
+          },
+          {
+            "q": "Hva heter den slemme trollmannen som drepte Harrys foreldre?",
+            "a": "Voldemort"
+          },
+          {
+            "q": "Hva heter sporten som spilles på flygende sopelimer?",
+            "a": "Rumpeldunk (Quidditch)"
+          }
+        ],
+        [
+          {
+            "q": "Hva kalles mennesker uten magiske evner?",
+            "a": "Mugglere"
+          },
+          {
+            "q": "Hva heter banken drevet av nisser i trollmannsverdenen?",
+            "a": "Gringotts"
+          },
+          {
+            "q": "Hvilket perrongnummer går toget til Galtvort fra på King's Cross?",
+            "a": "9¾"
+          }
+        ],
+        [
+          {
+            "q": "Hvor mange bøker er det i hovedserien om Harry Potter?",
+            "a": "7"
+          },
+          {
+            "q": "Hvilket monster bor i Hemmelighetenes kammer?",
+            "a": "Basilisken"
+          },
+          {
+            "q": "Hva kalles de skumle vaktene ved trollmannsfengselet Azkaban?",
+            "a": "Dementorer"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Dumbledores føniks?",
+            "a": "Fawkes"
+          },
+          {
+            "q": "Hva heter vaktmesteren på Galtvort?",
+            "a": "Argus Filch"
+          },
+          {
+            "q": "Hvilket dyr kan Sirius Black forvandle seg til?",
+            "a": "En stor, svart hund"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Disney-filmer",
+      "hint": "Tegnefilmene og figurene fra Disney og Pixar.",
+      "questions": [
+        [
+          {
+            "q": "Hvilken prinsesse mister en glassko på balletten?",
+            "a": "Askepott"
+          },
+          {
+            "q": "Hva heter den lille havfruen i Disney-filmen?",
+            "a": "Ariel"
+          },
+          {
+            "q": "Hvilken film har sangen «Let It Go»?",
+            "a": "Frost"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Simbas slemme onkel i «Løvenes konge»?",
+            "a": "Scar"
+          },
+          {
+            "q": "Hva heter tredukken som drømmer om å bli en ekte gutt?",
+            "a": "Pinocchio"
+          },
+          {
+            "q": "Hvilken film handler om Belle og et fortryllet beist?",
+            "a": "Skjønnheten og udyret"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken film har en ånd som bor i en lampe?",
+            "a": "Aladdin"
+          },
+          {
+            "q": "Hvilket dyr er Dumbo?",
+            "a": "En elefant"
+          },
+          {
+            "q": "Hva heter cowboy-dukken i «Toy Story»?",
+            "a": "Woody"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Elsas lillesøster i «Frost»?",
+            "a": "Anna"
+          },
+          {
+            "q": "Hva heter halvguden som hjelper Vaiana (Moana)?",
+            "a": "Maui"
+          },
+          {
+            "q": "Hvilken Pixar-film handler om en rotte som lager mat i Paris?",
+            "a": "Ratatouille"
+          }
+        ],
+        [
+          {
+            "q": "Hva var Disneys første lange tegnefilm (1937)?",
+            "a": "Snøhvit og de sju dvergene"
+          },
+          {
+            "q": "Hva heter Mikke Mus' kjæreste?",
+            "a": "Minnie Mus"
+          },
+          {
+            "q": "Hvilken Pixar-film handler om en liten søppelrobot?",
+            "a": "WALL-E"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Norsk natur",
+      "hint": "Fjell, elver, fjorder og natur i Norge.",
+      "questions": [
+        [
+          {
+            "q": "Hva heter Norges lengste elv?",
+            "a": "Glomma"
+          },
+          {
+            "q": "Hvilket dyr kalles ofte «skogens konge» i Norge?",
+            "a": "Elgen"
+          },
+          {
+            "q": "Hva kalles det grønne lysfenomenet på nordhimmelen?",
+            "a": "Nordlys"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Norges største innsjø?",
+            "a": "Mjøsa"
+          },
+          {
+            "q": "Hva heter Norges høyeste foss (860 meter)?",
+            "a": "Vinnufossen"
+          },
+          {
+            "q": "I hvilken nasjonalpark ligger Galdhøpiggen?",
+            "a": "Jotunheimen"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter øya der Nordkapp ligger?",
+            "a": "Magerøya"
+          },
+          {
+            "q": "Hva heter Norges største isbre på fastlandet?",
+            "a": "Jostedalsbreen"
+          },
+          {
+            "q": "Hva heter Norges største øy, utenom Svalbard?",
+            "a": "Hinnøya"
+          }
+        ],
+        [
+          {
+            "q": "Hva kalles perioden da sola ikke går ned i Nord-Norge?",
+            "a": "Midnattssol"
+          },
+          {
+            "q": "Hva er Norges største nasjonalpark på fastlandet?",
+            "a": "Hardangervidda"
+          },
+          {
+            "q": "Hva kalles de lange, trange havarmene som går inn i landet?",
+            "a": "Fjorder"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter Norges nasjonalfjell?",
+            "a": "Stetind"
+          },
+          {
+            "q": "Hva heter fjellplatået som ligger ca. 600 meter over Lysefjorden?",
+            "a": "Preikestolen"
+          },
+          {
+            "q": "Hva heter den høye loddrette fjellveggen i Romsdalen?",
+            "a": "Trollveggen"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Gaming",
+      "hint": "Dataspill, konsoller og spillfigurer.",
+      "questions": [
+        [
+          {
+            "q": "Hva heter rørleggeren som er Nintendos maskot?",
+            "a": "Mario"
+          },
+          {
+            "q": "Hvilket spill går ut på å bygge og utforske en verden av blokker?",
+            "a": "Minecraft"
+          },
+          {
+            "q": "Hva heter den gule figuren som spiser prikker og flykter fra spøkelser?",
+            "a": "Pac-Man"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter prinsessen Mario stadig redder?",
+            "a": "Prinsesse Peach"
+          },
+          {
+            "q": "Hva het Nintendos håndholdte konsoll fra 1989?",
+            "a": "Game Boy"
+          },
+          {
+            "q": "Hvilken gule, elektriske Pokémon er nummer 25?",
+            "a": "Pikachu"
+          }
+        ],
+        [
+          {
+            "q": "I hvilket spill snakker man om å vinne en «Victory Royale»?",
+            "a": "Fortnite"
+          },
+          {
+            "q": "Hva heter Sonys spillkonsoll?",
+            "a": "PlayStation"
+          },
+          {
+            "q": "Hva heter det russiske blokkspillet fra 1984?",
+            "a": "Tetris"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter helten i spillserien «The Legend of Zelda»?",
+            "a": "Link"
+          },
+          {
+            "q": "Hvilket selskap står bak spillkonsollen Xbox?",
+            "a": "Microsoft"
+          },
+          {
+            "q": "Hva het Nintendos stuekonsoll fra 2006 med bevegelsesstyring?",
+            "a": "Wii"
+          }
+        ],
+        [
+          {
+            "q": "Hvilket år kom det første «Super Mario Bros.»?",
+            "a": "1985"
+          },
+          {
+            "q": "Hva heter Pokémon-treneren fra Pallet Town i tegneserien?",
+            "a": "Ash Ketchum"
+          },
+          {
+            "q": "Hvilket spill regnes som historiens bestselgende?",
+            "a": "Minecraft"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Ord og språk",
+      "hint": "Norsk, grammatikk og språk i verden.",
+      "questions": [
+        [
+          {
+            "q": "Hva kaller vi to ord som betyr omtrent det samme?",
+            "a": "Synonymer"
+          },
+          {
+            "q": "Hvor mange bokstaver er det i det norske alfabetet?",
+            "a": "29"
+          },
+          {
+            "q": "Hva kaller vi ord som er stavet likt, men har ulik betydning, som «bank»?",
+            "a": "Homonymer"
+          }
+        ],
+        [
+          {
+            "q": "Hvilke tre bokstaver har norsk som engelsk ikke har?",
+            "a": "Æ, Ø og Å"
+          },
+          {
+            "q": "Hva heter det andre offisielle norske skriftspråket ved siden av bokmål?",
+            "a": "Nynorsk"
+          },
+          {
+            "q": "Hva kalles ordklassen som beskriver et substantiv, for eksempel «stor»?",
+            "a": "Adjektiv"
+          }
+        ],
+        [
+          {
+            "q": "Hva kalles det språket samene snakker?",
+            "a": "Samisk"
+          },
+          {
+            "q": "Hva kalles et ord som kan leses likt forfra og bakfra, for eksempel «anna»?",
+            "a": "Palindrom"
+          },
+          {
+            "q": "Hvilket språk har flest morsmålstalere i verden?",
+            "a": "Mandarin (kinesisk)"
+          }
+        ],
+        [
+          {
+            "q": "Hvilke to språkformer er offisielle skriftspråk i Norge?",
+            "a": "Bokmål og nynorsk"
+          },
+          {
+            "q": "Hva kalles ord som etterligner lyder, for eksempel «pang»?",
+            "a": "Lydord (onomatopoetikon)"
+          },
+          {
+            "q": "Hva kalles et ord satt sammen av to ord, for eksempel «bokhylle»?",
+            "a": "Sammensatt ord"
+          }
+        ],
+        [
+          {
+            "q": "Hvem laget nynorsk (landsmålet) på 1800-tallet?",
+            "a": "Ivar Aasen"
+          },
+          {
+            "q": "Hva er det offisielle språket i Brasil?",
+            "a": "Portugisisk"
+          },
+          {
+            "q": "Hva kalles dialekten som snakkes rundt Trondheim?",
+            "a": "Trøndersk"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Jul og høytider",
+      "hint": "Jul, påske og andre norske høytider og tradisjoner.",
+      "questions": [
+        [
+          {
+            "q": "Hvilken dato er julaften?",
+            "a": "24. desember"
+          },
+          {
+            "q": "Hvilket dyr trekker julenissens slede?",
+            "a": "Rein"
+          },
+          {
+            "q": "Hvilken høytid har påskeegg og påskehare?",
+            "a": "Påske"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter grøten med en mandel som mange spiser til jul?",
+            "a": "Risengrynsgrøt"
+          },
+          {
+            "q": "Hvilken norsk by har en berømt pepperkakeby?",
+            "a": "Bergen"
+          },
+          {
+            "q": "Hvilken dato feirer vi nasjonaldagen?",
+            "a": "17. mai"
+          }
+        ],
+        [
+          {
+            "q": "Hva kalles kvelden med bål 23. juni?",
+            "a": "Sankthansaften"
+          },
+          {
+            "q": "Hva heter de fire søndagene før jul?",
+            "a": "Advent"
+          },
+          {
+            "q": "Hvilken lys-feiring har vi 13. desember, oppkalt etter en helgen?",
+            "a": "Lucia"
+          }
+        ],
+        [
+          {
+            "q": "Hvilken høytid feires 50 dager etter påske?",
+            "a": "Pinse"
+          },
+          {
+            "q": "Hva kalles stjernen som ifølge juleevangeliet viste vei til Betlehem?",
+            "a": "Betlehemsstjernen"
+          },
+          {
+            "q": "Hvilken dato kalles «tjuende dag jul»?",
+            "a": "13. januar"
+          }
+        ],
+        [
+          {
+            "q": "Hva heter høytiden til minne om at Jesus fór opp til himmelen?",
+            "a": "Kristi himmelfartsdag"
+          },
+          {
+            "q": "Hvilken dag er første juledag?",
+            "a": "25. desember"
+          },
+          {
+            "q": "Hva heter søndagen sju uker før påske, kjent for fastelavnsboller?",
+            "a": "Fastelavnssøndag"
+          }
+        ]
+      ]
+    }
+  ]
+}

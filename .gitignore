@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.next-prod/
+.next-test/
+npm-debug.log*
+.DS_Store
+.env*
+# Impeccable downloads its own binary on first run
+.claude/skills/impeccable/scripts/bin/
+.claude/settings.local.json
