@@ -15,6 +15,12 @@ opptil 10 spillere buzzer fra mobilen på `/play`. Alt er på norsk, med poeng.
   legges til med én oppføring der (navn, `href`, beskrivelse, antall spillere og en animert
   forhåndsvisning i `components/`, som spilles ved hover/fokus og automatisk på berøringsskjermer).
 - Jeopardy: `pages/jeopardy.js` (velg vert/spiller), `pages/host.js`, `pages/play.js`.
+- Nærmest vinner: `pages/naermest/` (index, host, play), logikk i `lib/naermestManager.js`
+  (egen Socket.IO-namespace `/naermest`), spørsmål i `questions-naermest.json` (`q`, `answer`,
+  `unit`). 10 runder à 30 s; nærmest får 3/2/1 poeng, eksakt treff +2.
+- Felles byggeklosser for nye spill: `components/` (HostHeader, Lobby, Scoreboard, Countdown,
+  FinalScores, MyScore, JoinScreen, NumberLine) og `lib/playerDevice.js` (`usePlayerSession`,
+  vibrasjon, skjermfarge, wake lock), `lib/numbers.js` (norske tall).
   `styles/globals.css` (alle farger er tokens).
 
 ## Kjøring

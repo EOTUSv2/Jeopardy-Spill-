@@ -1,175 +1,30 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import io from 'socket.io-client';
 import { strings, formatPoints } from '../lib/strings';
 import { useCountdown } from '../lib/useCountdown';
-import { useScoreChange, formatDelta } from '../lib/useScoreChange';
 import { computeAwards, seconds } from '../lib/awards';
-
-function vibrate(pattern) {
-  if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(pattern);
-}
-
-// The browser bar takes the player's colour too, so the whole phone is theirs.
-function useBrowserTint(myIndex) {
-  useEffect(() => {
-    const meta = document.querySelector('meta[name="theme-color"]');
-    if (!meta) return;
-    const original = meta.getAttribute('content');
-    if (myIndex >= 0) {
-      const colour = getComputedStyle(document.documentElement)
-        .getPropertyValue(`--p-${myIndex % 10}`)
-        .trim();
-      if (colour) meta.setAttribute('content', colour);
-    }
-    return () => meta.setAttribute('content', original);
-  }, [myIndex]);
-}
-
-function getClientId() {
-  if (typeof window === 'undefined') return null;
-  let id = localStorage.getItem('jeopardy_playerId');
-  if (!id) {
-    id = Math.random().toString(36).slice(2) + Date.now().toString(36);
-    localStorage.setItem('jeopardy_playerId', id);
-  }
-  return id;
-}
-
-// Keep the phone screen awake while playing, so the player is not dropped
-// from the game when the display locks. Silently skipped where unsupported.
-function useWakeLock(active) {
-  useEffect(() => {
-    if (!active || typeof navigator === 'undefined' || !navigator.wakeLock) return;
-    let lock = null;
-    let cancelled = false;
-    const acquire = async () => {
-      try {
-        lock = await navigator.wakeLock.request('screen');
-        if (cancelled && lock) lock.release();
-      } catch (e) {
-        // denied (e.g. low battery); not essential
-      }
-    };
-    const onVisible = () => {
-      if (document.visibilityState === 'visible') acquire();
-    };
-    acquire();
-    document.addEventListener('visibilitychange', onVisible);
-    return () => {
-      cancelled = true;
-      document.removeEventListener('visibilitychange', onVisible);
-      if (lock) lock.release().catch(() => {});
-    };
-  }, [active]);
-}
+import { vibrate, useBrowserTint, usePlayerSession } from '../lib/playerDevice';
+import MyScore from '../components/MyScore';
+import JoinScreen from '../components/JoinScreen';
 
 export default function Play() {
-  const [state, setState] = useState(null);
-  const [joined, setJoined] = useState(false);
-  const [code, setCode] = useState('');
-  const [name, setName] = useState('');
-  const [error, setError] = useState('');
-  const socketRef = useRef(null);
-  const clientIdRef = useRef(null);
+  // Jeopardy uses the default namespace and keeps its original storage keys.
+  const session = usePlayerSession('', 'jeopardy');
 
-  useWakeLock(joined);
+  if (!session.joined) return <JoinScreen title={strings.titlePlay} session={session} />;
 
-  useEffect(() => {
-    clientIdRef.current = getClientId();
-    const savedCode = sessionStorage.getItem('jeopardy_code');
-    const savedName = sessionStorage.getItem('jeopardy_name');
-    if (savedCode) setCode(savedCode);
-    if (savedName) setName(savedName);
-
-    const socket = io();
-    socketRef.current = socket;
-    socket.on('state:player', (s) => setState(s));
-
-    if (savedCode && savedName) {
-      socket.on('connect', () => tryJoin(savedCode, savedName, true));
-    }
-
-    return () => socket.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  function tryJoin(codeVal, nameVal, silent) {
-    const socket = socketRef.current;
-    socket.emit(
-      'player:join',
-      { code: codeVal.trim().toUpperCase(), name: nameVal, clientId: clientIdRef.current },
-      (res) => {
-        if (res && res.error) {
-          if (!silent) setError(res.error);
-        } else {
-          setJoined(true);
-          setError('');
-          sessionStorage.setItem('jeopardy_code', codeVal.trim().toUpperCase());
-          sessionStorage.setItem('jeopardy_name', nameVal);
-        }
-      }
-    );
-  }
-
-  function handleJoin(e) {
-    e.preventDefault();
-    if (!code.trim() || !name.trim()) return;
-    tryJoin(code, name, false);
-  }
-
-  if (!joined) {
-    return (
-      <main className="center-page">
-      <Head>
-        <title>{strings.titlePlay}</title>
-      </Head>
-        <h1 className="title">{strings.joinTitle}</h1>
-        <form onSubmit={handleJoin} className="join-form">
-          <input
-            className="input"
-            placeholder={strings.codePlaceholder}
-            aria-label={strings.codePlaceholder}
-            value={code}
-            maxLength={4}
-            autoCapitalize="characters"
-            autoComplete="off"
-            onChange={(e) => setCode(e.target.value.toUpperCase())}
-          />
-          <input
-            className="input"
-            placeholder={strings.namePlaceholder}
-            aria-label={strings.namePlaceholder}
-            value={name}
-            maxLength={20}
-            autoComplete="off"
-            onChange={(e) => setName(e.target.value)}
-          />
-          {error && (
-            <div className="error" role="alert">
-              {error}
-            </div>
-          )}
-          <button className="btn btn-gold btn-lg" type="submit">
-            {strings.joinButton}
-          </button>
-        </form>
-      </main>
-    );
-  }
-
-  if (!state) {
+  if (!session.state) {
     return (
       <div className="center-page">
-      <Head>
-        <title>{strings.titlePlay}</title>
-      </Head>
+        <Head>
+          <title>{strings.titlePlay}</title>
+        </Head>
         {strings.connecting}
       </div>
     );
   }
 
-  return <PlayerGame state={state} socket={socketRef.current} />;
+  return <PlayerGame state={session.state} socket={session.socket} />;
 }
 
 function PlayerGame({ state, socket }) {
@@ -578,19 +433,5 @@ function FinalAnswerForm({ state, socket, myIndex }) {
         </p>
       </form>
     </PlayerShell>
-  );
-}
-
-function MyScore({ me }) {
-  const { display, delta } = useScoreChange(me ? me.score : 0);
-  return (
-    <div className="my-score">
-      {me ? me.name : ''} · {formatPoints(display)}
-      {delta && (
-        <span key={delta.id} className={`score-delta inline ${delta.value > 0 ? 'gain' : 'loss'}`}>
-          {formatDelta(delta.value)}
-        </span>
-      )}
-    </div>
   );
 }

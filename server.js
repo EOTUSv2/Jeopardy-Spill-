@@ -3,6 +3,7 @@ const os = require('os');
 const next = require('next');
 const { Server } = require('socket.io');
 const { createGameManager } = require('./lib/gameManager');
+const { createNaermestManager } = require('./lib/naermestManager');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -24,6 +25,7 @@ app.prepare().then(() => {
   const httpServer = createServer((req, res) => handle(req, res));
   const io = new Server(httpServer);
   createGameManager(io);
+  createNaermestManager(io);
 
   httpServer.listen(port, '0.0.0.0', () => {
     console.log('');

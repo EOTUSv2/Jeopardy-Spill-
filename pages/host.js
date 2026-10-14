@@ -3,8 +3,12 @@ import Head from 'next/head';
 import io from 'socket.io-client';
 import { strings, formatPoints } from '../lib/strings';
 import { useCountdown } from '../lib/useCountdown';
-import { useScoreChange, formatDelta, prefersReducedMotion } from '../lib/useScoreChange';
+import { prefersReducedMotion } from '../lib/useScoreChange';
 import { computeAwards, seconds } from '../lib/awards';
+import Countdown from '../components/Countdown';
+import HostHeader from '../components/HostHeader';
+import Lobby from '../components/Lobby';
+import FinalScores from '../components/FinalScores';
 
 const QUESTION_SECONDS = 20;
 const FINAL_SECONDS = 30;
@@ -122,7 +126,6 @@ function useSoundSetting() {
 export default function Host() {
   const [state, setState] = useState(null);
   const [denied, setDenied] = useState(false);
-  const [confirmingNew, setConfirmingNew] = useState(false);
   const [sound, toggleSound] = useSoundSetting();
   const socketRef = useRef(null);
   const lastBuzzer = useRef(null);
@@ -172,7 +175,6 @@ export default function Host() {
   const socket = socketRef.current;
 
   function startNewGame() {
-    setConfirmingNew(false);
     socket.emit('host:new', (s) => setState(s));
   }
 
@@ -193,37 +195,21 @@ export default function Host() {
   return (
     <div className="host-page">
       {head}
-      <header className="host-header">
-        <div className="code-box">
-          {strings.code} <span>{state.code}</span>
-        </div>
-        <Scoreboard players={state.players} ringedPlayerId={ringedPlayerId(state)} />
-        <div className="header-actions">
-          <button className="btn btn-small" onClick={toggleSound} aria-pressed={sound}>
-            {sound ? strings.soundOn : strings.soundOff}
-          </button>
-          {confirmingNew ? (
-            <div className="confirm-row" role="group" aria-label={strings.confirmNewGame}>
-              <span>{strings.confirmNewGame}</span>
-              <button className="btn btn-wrong btn-compact" onClick={startNewGame}>
-                {strings.confirmYes}
-              </button>
-              <button className="btn btn-small" onClick={() => setConfirmingNew(false)} autoFocus>
-                {strings.confirmCancel}
-              </button>
-            </div>
-          ) : (
-            <button className="btn btn-small" onClick={() => setConfirmingNew(true)}>
-              {strings.newGame}
-            </button>
-          )}
-        </div>
-      </header>
+      <HostHeader
+        code={state.code}
+        players={state.players}
+        ringedPlayerId={ringedPlayerId(state)}
+        onNewGame={startNewGame}
+      >
+        <button className="btn btn-small" onClick={toggleSound} aria-pressed={sound}>
+          {sound ? strings.soundOn : strings.soundOff}
+        </button>
+      </HostHeader>
 
-      {state.status === 'lobby' && <Lobby state={state} socket={socket} />}
+      {state.status === 'lobby' && <Lobby state={state} onStart={() => socket.emit('host:start')} />}
       {state.status === 'playing' && <Board state={state} socket={socket} />}
       {state.status === 'final' && state.final && <FinalRound state={state} socket={socket} />}
-      {state.status === 'finished' && <FinalScores players={state.players} />}
+      {state.status === 'finished' && <FinalScores players={state.players} awards={computeAwards(state.players)} />}
     </div>
   );
 }
@@ -235,82 +221,6 @@ function ringedPlayerId(state) {
   const f = state.final;
   if (state.status === 'final' && f && f.stage === 'review') return f.order[f.current];
   return null;
-}
-
-function Countdown({ remaining, total }) {
-  if (remaining === null) return null;
-  return (
-    <div className={`countdown ${remaining <= 5 ? 'countdown-urgent' : ''}`}>
-      <span className="countdown-num">{remaining}</span>
-      <span className="countdown-track">
-        <span className="countdown-fill" style={{ transform: `scaleX(${remaining / total})` }} />
-      </span>
-    </div>
-  );
-}
-
-function Scoreboard({ players, ringedPlayerId }) {
-  return (
-    <div className="scoreboard">
-      {players.map((p, i) => (
-        <ScoreChip key={p.id} player={p} index={i} ringed={p.id === ringedPlayerId} />
-      ))}
-    </div>
-  );
-}
-
-function ScoreChip({ player, index, ringed }) {
-  const { display, delta } = useScoreChange(player.score);
-  const tone = delta ? (delta.value > 0 ? 'gain' : 'loss') : '';
-  return (
-    <div
-      className={`score-chip pc-${index % 10} ${player.connected ? '' : 'offline'} ${ringed ? 'buzzed-ring' : ''}`}
-    >
-      {delta && <span key={`f${delta.id}`} className={`chip-flash ${tone}`} aria-hidden="true" />}
-      <span className="score-name">{player.name}</span>
-      <span className="score-val">{formatPoints(display)}</span>
-      {delta && (
-        <span key={delta.id} className={`score-delta ${tone}`}>
-          {formatDelta(delta.value)}
-        </span>
-      )}
-    </div>
-  );
-}
-
-function Lobby({ state, socket }) {
-  return (
-    <main className="center-page">
-      <div className="lobby-join">
-        <h1 className="page-heading">{strings.waitingForPlayers}</h1>
-        <div className="join-code" role="img" aria-label={`${strings.code} ${state.code}`}>
-          {state.code.split('').map((ch, i) => (
-            <span key={i} className="join-code-tile" aria-hidden="true">
-              {ch}
-            </span>
-          ))}
-        </div>
-        <p className="hint">{strings.joinInstructions(state.code)}</p>
-      </div>
-      <div className="player-slots">
-        {Array.from({ length: state.maxPlayers }).map((_, i) => {
-          const p = state.players[i];
-          return (
-            <div key={i} className={`player-slot pc-${i % 10} ${p ? 'filled' : ''}`}>
-              {p ? p.name : strings.waitingForPlayerN(i + 1)}
-            </div>
-          );
-        })}
-      </div>
-      <button
-        className="btn btn-gold btn-lg"
-        disabled={state.players.length === 0}
-        onClick={() => socket.emit('host:start')}
-      >
-        {strings.startGame(state.players.length, state.maxPlayers)}
-      </button>
-    </main>
-  );
 }
 
 function Board({ state, socket }) {
@@ -869,60 +779,5 @@ function FinalReview({ state, socket }) {
         )}
       </div>
     </>
-  );
-}
-
-// Last place is revealed first and the winner last, about 2.4 s in total.
-function revealDelay(count, rank) {
-  const step = Math.min(520, 2400 / Math.max(1, count - 1));
-  return 500 + (count - 1 - rank) * step;
-}
-
-function FinalScores({ players }) {
-  const sorted = players
-    .map((p, i) => ({ p, i }))
-    .sort((a, b) => b.p.score - a.p.score);
-  const awards = computeAwards(players);
-  // The awards arrive after the winner's band has filled in.
-  const awardsAt = revealDelay(sorted.length, 0) + 1100;
-  return (
-    <main className="center-page">
-      <h1>{strings.finalResults}</h1>
-      <ol className="final-list">
-        {sorted.map(({ p, i }, rank) => (
-          <li
-            key={p.id}
-            className={`pc-${i % 10}`}
-            style={{ '--d': `${revealDelay(sorted.length, rank)}ms` }}
-          >
-            <span className="final-name">{p.name}</span>
-            <span className="final-score">{formatPoints(p.score)}</span>
-          </li>
-        ))}
-      </ol>
-      {awards.length > 0 && (
-        <section className="awards" aria-label={strings.awardsTitle}>
-          <h2 className="awards-title" style={{ '--d': `${awardsAt}ms` }}>
-            {strings.awardsTitle}
-          </h2>
-          <ul className="award-list">
-            {awards.map((a, n) => {
-              const i = players.findIndex((p) => p.id === a.playerId);
-              return (
-                <li
-                  key={a.id}
-                  className={`award pc-${i % 10}`}
-                  style={{ '--d': `${awardsAt + 250 + n * 220}ms` }}
-                >
-                  <span className="award-title">{a.title}</span>
-                  <span className="award-name">{players[i].name}</span>
-                  <span className="award-value">{a.value}</span>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      )}
-    </main>
   );
 }

@@ -9,9 +9,15 @@
   --sun: #ffc21a;
   --coral: #ff5a5f;
   --coral-deep: #c9293a;
+  --coral-light: #ff8a78; /* buzz button highlight */
   --mint: #19c18a;
   --mint-ink: #053f2e;
   --line: rgba(28, 22, 70, 0.14);
+  /* Shadow colours (as RGB channels, used with an alpha). One ink for all
+     depth, coral for the buzz button, white for its highlight. */
+  --shadow-ink: 20 16 58;
+  --shadow-coral: 201 41 58;
+  --shadow-light: 255 255 255;
   /* The stage: one saturated blue owns the room (board, lobby, results).
      Cells are ink with gold numerals; cards are cream surfaces on top. */
   --stage: #2d4bff;
@@ -242,20 +248,20 @@ a.hint {
   cursor: pointer;
   text-decoration: none;
   color: var(--ink);
-  box-shadow: 0 6px 14px rgba(28, 22, 70, 0.16);
+  box-shadow: 0 6px 14px rgb(var(--shadow-ink) / 0.16);
   transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out);
 }
 
 @media (hover: hover) {
   .btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(28, 22, 70, 0.2);
+    box-shadow: 0 10px 20px rgb(var(--shadow-ink) / 0.2);
   }
 }
 
 .btn:active:not(:disabled) {
   transform: translateY(1px);
-  box-shadow: 0 3px 8px rgba(28, 22, 70, 0.18);
+  box-shadow: 0 3px 8px rgb(var(--shadow-ink) / 0.18);
 }
 
 .btn:disabled {
@@ -326,14 +332,18 @@ a.hint {
 }
 
 .host-header {
-  display: flex;
+  /* Top row: code, home logo in the middle, sound/new game.
+     The scoreboard gets its own row underneath. */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+    'code home actions'
+    'scores scores scores';
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
+  gap: var(--space-2) var(--space-4);
   padding: var(--space-3) var(--space-5);
   background: var(--ink);
   color: var(--paper);
-  flex-wrap: wrap;
 }
 
 .code-box {
@@ -375,7 +385,27 @@ a.hint {
 }
 
 .score-chip.offline {
-  opacity: 0.45;
+  border-top-style: dashed;
+  outline: 2px dashed var(--on-stage-soft);
+  outline-offset: -2px;
+}
+
+/* A small tag on the chip's bottom edge, so the chip keeps its height. */
+.score-chip > .score-offline {
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  translate: -50% 0;
+  padding: 0 var(--space-2);
+  border-radius: 999px;
+  background: var(--coral);
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 .score-chip.buzzed-ring {
@@ -598,7 +628,7 @@ a.hint {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 1.5px solid rgba(28, 22, 70, 0.55);
+  border: 1.5px solid rgb(var(--shadow-ink) / 0.55);
   background: transparent;
   color: var(--ink);
   font-size: 0.65rem;
@@ -644,7 +674,7 @@ a.hint {
   width: 14rem;
   z-index: 10;
   animation: reveal 0.2s var(--ease-out) both;
-  box-shadow: 0 14px 28px rgba(28, 22, 70, 0.25);
+  box-shadow: 0 14px 28px rgb(var(--shadow-ink) / 0.25);
 }
 
 .hint-tooltip.hint-start {
@@ -668,7 +698,7 @@ a.hint {
   font-variant-numeric: tabular-nums;
   min-height: 64px;
   cursor: pointer;
-  box-shadow: 0 8px 18px rgba(12, 10, 48, 0.35);
+  box-shadow: 0 8px 18px rgb(var(--shadow-ink) / 0.35);
   transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out),
     background-color 0.18s var(--ease-out);
 }
@@ -677,7 +707,7 @@ a.hint {
   .cell:hover:not(:disabled) {
     background: var(--cell-hover);
     transform: translateY(-3px);
-    box-shadow: 0 14px 26px rgba(12, 10, 48, 0.42);
+    box-shadow: 0 14px 26px rgb(var(--shadow-ink) / 0.42);
   }
 }
 
@@ -709,7 +739,7 @@ a.hint {
   border-radius: 28px;
   padding: clamp(var(--space-5), 4vw, var(--space-8));
   text-align: center;
-  box-shadow: 0 30px 60px rgba(28, 22, 70, 0.22);
+  box-shadow: 0 30px 60px rgb(var(--shadow-ink) / 0.22);
   animation: panelIn 0.45s var(--ease-out) both;
   font-weight: var(--fw-body);
 }
@@ -922,7 +952,7 @@ a.hint {
 
 .input::placeholder {
   color: var(--ink-soft);
-  opacity: 0.75;
+  opacity: 1;
   font-weight: var(--fw-body);
 }
 
@@ -982,14 +1012,14 @@ a.hint {
   width: min(78vw, 320px, 56dvh);
   height: min(78vw, 320px, 56dvh);
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 28%, #ff8a78, var(--coral) 55%);
+  background: radial-gradient(circle at 35% 28%, var(--coral-light), var(--coral) 55%);
   border: none;
   color: var(--ink);
   font-size: 2.6rem;
   font-weight: var(--fw-bold);
   letter-spacing: 0.08em;
-  box-shadow: 0 22px 36px rgba(201, 41, 58, 0.38), inset 0 -14px 22px rgba(201, 41, 58, 0.3),
-    inset 0 10px 16px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 22px 36px rgb(var(--shadow-coral) / 0.38), inset 0 -14px 22px rgb(var(--shadow-coral) / 0.3),
+    inset 0 10px 16px rgb(var(--shadow-light) / 0.35);
   cursor: pointer;
   transition: transform 0.12s var(--ease-out), box-shadow 0.12s var(--ease-out);
   touch-action: manipulation;
@@ -998,8 +1028,8 @@ a.hint {
 
 .buzz-button:active:not(.disabled) {
   transform: translateY(6px) scale(0.98);
-  box-shadow: 0 8px 16px rgba(201, 41, 58, 0.35), inset 0 -8px 16px rgba(201, 41, 58, 0.3),
-    inset 0 8px 14px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 16px rgb(var(--shadow-coral) / 0.35), inset 0 -8px 16px rgb(var(--shadow-coral) / 0.3),
+    inset 0 8px 14px rgb(var(--shadow-light) / 0.3);
 }
 
 .buzz-button.disabled {
@@ -1144,14 +1174,14 @@ a.hint {
   background: var(--pc, var(--sun));
   color: var(--ink);
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(28, 22, 70, 0.28);
+  box-shadow: 0 6px 14px rgb(var(--shadow-ink) / 0.28);
   transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out);
 }
 
 @media (hover: hover) {
   .dd-pick-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 22px rgba(28, 22, 70, 0.32);
+    box-shadow: 0 12px 22px rgb(var(--shadow-ink) / 0.32);
   }
 }
 
@@ -1343,7 +1373,9 @@ a.hint {
 
 .dd-pick-btn.offline,
 .roster-chip.offline {
-  opacity: 0.55;
+  border-style: dashed;
+  outline: 2px dashed currentColor;
+  outline-offset: -4px;
 }
 
 .roster-chip.is-out .roster-status {
@@ -1386,7 +1418,7 @@ a.hint {
   border-radius: 24px;
   overflow: hidden;
   background: var(--surface);
-  box-shadow: 0 18px 36px rgba(28, 22, 70, 0.18);
+  box-shadow: 0 18px 36px rgb(var(--shadow-ink) / 0.18);
   animation: reveal 0.4s var(--ease-out) both;
 }
 
@@ -1692,7 +1724,7 @@ a.hint {
   font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: var(--fw-bold);
   line-height: 1;
-  box-shadow: 0 10px 20px rgba(12, 10, 48, 0.35);
+  box-shadow: 0 10px 20px rgb(var(--shadow-ink) / 0.35);
   animation: reveal 0.45s var(--ease-out) backwards;
 }
 
@@ -1717,7 +1749,7 @@ a.hint {
   --ink-soft: var(--ink);
   --on-stage: var(--ink);
   --on-stage-soft: var(--ink);
-  --stage-line: rgba(28, 22, 70, 0.3);
+  --stage-line: rgb(var(--shadow-ink) / 0.3);
   transition: background-color 0.4s var(--ease-out);
   font-weight: var(--fw-body);
 }
@@ -1744,12 +1776,12 @@ a.hint {
 
 .player-tinted .btn-gold,
 .player-tinted .final-phone-fasit {
-  box-shadow: inset 0 0 0 3px var(--ink), 0 6px 14px rgba(28, 22, 70, 0.16);
+  box-shadow: inset 0 0 0 3px var(--ink), 0 6px 14px rgb(var(--shadow-ink) / 0.16);
 }
 
 .player-tinted .buzz-button:not(.disabled) {
-  box-shadow: 0 0 0 5px var(--ink), 0 22px 36px rgba(28, 22, 70, 0.32),
-    inset 0 -14px 22px rgba(201, 41, 58, 0.3), inset 0 10px 16px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 5px var(--ink), 0 22px 36px rgb(var(--shadow-ink) / 0.32),
+    inset 0 -14px 22px rgb(var(--shadow-coral) / 0.3), inset 0 10px 16px rgb(var(--shadow-light) / 0.35);
 }
 
 .player-tinted .buzz-button.disabled {
@@ -1772,7 +1804,7 @@ a.hint {
 }
 
 .player-tinted .player-slot.filled {
-  box-shadow: 0 4px 10px rgba(28, 22, 70, 0.18);
+  box-shadow: 0 4px 10px rgb(var(--shadow-ink) / 0.18);
 }
 
 /* Question cards are split in two: the stage is what the room reads, the
@@ -2023,7 +2055,7 @@ a.hint {
   border-radius: 18px;
   background: var(--cell);
   color: var(--on-stage);
-  box-shadow: 0 10px 20px rgba(12, 10, 48, 0.35);
+  box-shadow: 0 10px 20px rgb(var(--shadow-ink) / 0.35);
   animation: rankIn 0.55s var(--ease-out) var(--d, 0ms) backwards;
 }
 
@@ -2118,7 +2150,7 @@ a.hint {
   color: var(--ink);
   font-weight: var(--fw-body);
   text-decoration: none;
-  box-shadow: 0 18px 36px rgba(12, 10, 48, 0.3);
+  box-shadow: 0 18px 36px rgb(var(--shadow-ink) / 0.3);
   transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 
@@ -2130,7 +2162,7 @@ a.hint {
 @media (hover: hover) {
   .game-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 26px 48px rgba(12, 10, 48, 0.38);
+    box-shadow: 0 26px 48px rgb(var(--shadow-ink) / 0.38);
   }
 }
 
@@ -2419,5 +2451,588 @@ a.hint {
   100% {
     opacity: 0;
     transform: translateY(-3cqi);
+  }
+}
+
+.host-header .code-box {
+  grid-area: code;
+  justify-self: start;
+}
+
+.host-header .scoreboard {
+  grid-area: scores;
+}
+
+.host-header .header-actions {
+  grid-area: actions;
+  justify-self: end;
+}
+
+/* Small wordmark that takes the host back to the game menu. */
+.home-link {
+  grid-area: home;
+  justify-self: center;
+  padding: var(--space-1) var(--space-4);
+  border: 2px solid var(--sun);
+  border-radius: 999px;
+  color: var(--sun);
+  font-size: var(--fs-ui);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .home-link:hover {
+    background: var(--sun);
+    color: var(--ink);
+  }
+}
+
+/* ---------- Nærmest vinner ---------- */
+.nv-panel .q-text {
+  font-size: var(--fs-question);
+}
+
+.nv-reveal .q-text {
+  font-size: var(--fs-title);
+}
+
+/* The reveal carries the line and the ranking, so it runs tighter. */
+.nv-reveal.question-panel {
+  margin-top: 2vh;
+  padding: clamp(18px, 3vh, 32px) clamp(20px, 3vw, 40px);
+}
+
+.nv-reveal .panel-stage {
+  gap: var(--space-4);
+}
+
+.nv-reveal .panel-controls {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.nv-unit {
+  margin: 0;
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-ui);
+  color: var(--ink-soft);
+}
+
+/* Number line: pins in player colours above an ink track, the gold answer
+   marker dropping in on reveal. */
+.nl {
+  width: 100%;
+  --pin: 40px;
+  --lane-h: 42px;
+}
+
+.nl-field {
+  position: relative;
+  height: calc(var(--lanes) * var(--lane-h) + 56px);
+  margin: 0 calc(var(--pin) / 2);
+}
+
+.nl-pin {
+  position: absolute;
+  bottom: calc(var(--lane) * var(--lane-h) + 14px);
+  translate: -50% 0;
+  display: grid;
+  place-items: center;
+  width: var(--pin);
+  height: var(--pin);
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  background: var(--pc, var(--surface));
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-weight: var(--fw-bold);
+  z-index: 2;
+  animation: pinDrop 0.5s var(--ease-out) var(--d, 0ms) backwards;
+}
+
+/* A stem from each pin down to the track, so stacked pins still point
+   at their exact spot. */
+.nl-pin::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 3px;
+  height: calc(var(--lane) * var(--lane-h) + 14px);
+  translate: -50% 0;
+  background: var(--ink);
+}
+
+.nl-pin.is-winner {
+  outline: 4px solid var(--sun);
+  outline-offset: 3px;
+  animation:
+    pinDrop 0.5s var(--ease-out) var(--d, 0ms) backwards,
+    winnerPop 0.6s var(--ease-out) 0.9s backwards;
+}
+
+.nl-answer {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  width: 8px;
+  translate: -50% 0;
+  border-radius: 4px;
+  background: var(--sun);
+  box-shadow: 0 0 0 3px var(--ink);
+  z-index: 3;
+  transform-origin: bottom center;
+  animation: answerDrop 0.6s var(--ease-out) 0.2s backwards;
+}
+
+.nl-answer-label {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  translate: -50% 0;
+  padding: var(--space-1) var(--space-4);
+  border-radius: 999px;
+  border: 3px solid var(--ink);
+  background: var(--sun);
+  color: var(--ink);
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.nl-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--ink);
+}
+
+.nl-ends {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-size: var(--fs-label);
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes pinDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.6);
+  }
+}
+
+@keyframes answerDrop {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes winnerPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.nv-guess-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.nv-guess {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--pc, var(--surface));
+  border: 2px solid var(--ink);
+  font-size: var(--fs-ui);
+}
+
+.nv-guess-name {
+  font-weight: var(--fw-bold);
+}
+
+.nv-guess-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ranking after the reveal. */
+.nv-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: min(760px, 100%);
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: var(--space-5);
+}
+
+.nv-results-two {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nv-result {
+  display: grid;
+  grid-template-columns: 3ch 1fr auto 3.5ch;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: 6px var(--space-4);
+  border-bottom: 2px solid var(--line);
+  font-size: var(--fs-lead);
+  text-align: left;
+  animation: rankIn 0.45s var(--ease-out) var(--d, 0ms) backwards;
+}
+
+.nv-result.is-first {
+  background: var(--sun);
+  border-radius: 14px;
+  border-bottom-color: transparent;
+}
+
+.nv-result-place {
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.nv-result-name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--fw-bold);
+  min-width: 0;
+}
+
+.nv-result-name::before {
+  content: '';
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--pc, transparent);
+  box-shadow: 0 0 0 2px var(--ink);
+}
+
+.nv-result-guess {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  column-gap: var(--space-2);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--fw-ui);
+}
+
+.nv-result-diff {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-body);
+  color: var(--ink-soft);
+}
+
+.nv-result-points {
+  text-align: right;
+  color: var(--mint-ink);
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.nv-result.is-first .nv-result-points {
+  color: var(--ink);
+}
+
+/* Phone: one big number field with the unit under it. */
+.nv-input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nv-input {
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.nv-input[aria-invalid='true'] {
+  border-color: var(--coral-deep);
+}
+
+.nv-input-unit {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-ui);
+}
+
+/* ---------- Nærmest vinner preview (menu) ---------- */
+.game-card:is(:hover, :focus-visible) .nv-scene {
+  --nv-pin: nvPin;
+  --nv-answer: nvAnswer;
+  --nv-points: nvPoints;
+  --nv-win: nvWin;
+}
+
+@media (hover: none) {
+  .nv-scene {
+    --nv-pin: nvPin;
+    --nv-answer: nvAnswer;
+    --nv-points: nvPoints;
+    --nv-win: nvWin;
+  }
+}
+
+.nv-scene {
+  /* No padding: container units measure the content box, so padding here
+     would shrink every pin. The question bars are placed absolutely. */
+  position: absolute;
+  inset: 0;
+  container-type: size;
+}
+
+.nv-scene-question {
+  position: absolute;
+  top: 11%;
+  left: 15%;
+  width: 70%;
+  height: 6cqh;
+  border-radius: 3cqh;
+  background: var(--paper);
+}
+
+.nv-scene-question-short {
+  top: 21%;
+  left: 29%;
+  width: 42%;
+  opacity: 0.75;
+}
+
+.nv-scene-line {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  bottom: 14%;
+  height: 48cqh;
+}
+
+.nv-scene-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.4cqh;
+  border-radius: 1cqh;
+  background: var(--cell);
+}
+
+.nv-scene-pin {
+  position: absolute;
+  bottom: calc(3cqh + var(--lane) * 13cqh);
+  translate: -50% 0;
+  display: grid;
+  place-items: center;
+  width: 11cqh;
+  height: 11cqh;
+  border-radius: 50%;
+  border: 0.8cqh solid var(--ink);
+  background: var(--pc);
+  color: var(--ink);
+  font-size: 5cqh;
+  font-weight: var(--fw-bold);
+  z-index: 2;
+  animation: var(--nv-pin, none) 5s var(--ease-out) infinite;
+  animation-delay: calc(var(--i) * 120ms);
+}
+
+.nv-scene-pin.is-winner {
+  animation:
+    var(--nv-pin, none) 5s var(--ease-out) infinite calc(var(--i) * 120ms),
+    var(--nv-win, none) 5s var(--ease-out) infinite;
+}
+
+.nv-scene-answer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1.6cqh;
+  translate: -50% 0;
+  border-radius: 1cqh;
+  background: var(--sun);
+  box-shadow: 0 0 0 0.6cqh var(--ink);
+  transform-origin: bottom center;
+  z-index: 3;
+  animation: var(--nv-answer, none) 5s var(--ease-out) infinite;
+}
+
+.nv-scene-points {
+  position: absolute;
+  bottom: 36cqh;
+  translate: -50% 0;
+  padding: 0.8cqh 2.6cqh;
+  border-radius: 999px;
+  border: 0.6cqh solid var(--ink);
+  background: var(--mint);
+  color: var(--mint-ink);
+  font-size: 4.5cqh;
+  font-weight: var(--fw-bold);
+  z-index: 4;
+  opacity: 0;
+  animation: var(--nv-points, none) 5s var(--ease-out) infinite;
+}
+
+/* Pins fall onto the line one by one. */
+@keyframes nvPin {
+  0% {
+    opacity: 0;
+    transform: translateY(-14cqh);
+  }
+  10%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Then the answer drops in. */
+@keyframes nvAnswer {
+  0%,
+  34% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  44%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The closest pin pops… */
+@keyframes nvWin {
+  0%,
+  48% {
+    transform: none;
+  }
+  54% {
+    transform: scale(1.3);
+  }
+  60%,
+  100% {
+    transform: none;
+  }
+}
+
+/* …and scores. */
+@keyframes nvPoints {
+  0%,
+  52% {
+    opacity: 0;
+    transform: translateY(2cqh) scale(0.8);
+  }
+  58%,
+  82% {
+    opacity: 1;
+    transform: none;
+  }
+  92%,
+  100% {
+    opacity: 0;
+    transform: translateY(-3cqh);
+  }
+}
+
+/* During the reveal the round counter moves down to the control bar, so the
+   line and the ranking get the height. */
+.nv-reveal .panel-stage > .q-cat {
+  display: none;
+}
+
+.nv-round-note {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-ui);
+  color: var(--ink-soft);
+}
+
+/* Links that phones tap: give them a full-size touch target. */
+.back-link,
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.back-link {
+  padding-inline: var(--space-3);
+}
+
+/* Short TVs (720p) and laptops: compact scoreboard so ten players stay on
+   one row, and a tighter number line and ranking in Nærmest vinner. */
+@media (max-height: 820px) {
+  .host-header {
+    padding-block: var(--space-2);
+    row-gap: var(--space-1);
+  }
+
+  .final-stage {
+    padding-bottom: var(--space-3);
+  }
+
+  /* Everyone has read the question by the reveal; keep it to one line. */
+  .nv-reveal.question-panel {
+    margin-top: var(--space-2);
+  }
+
+  .nv-reveal .q-text {
+    font-size: var(--fs-lead);
+  }
+
+  .score-chip {
+    min-width: 96px;
+    padding: 4px var(--space-3);
+  }
+
+  .score-name {
+    font-size: var(--fs-label);
+  }
+
+  .score-val {
+    font-size: 1.15rem;
+  }
+
+  .nl {
+    --pin: 34px;
+    --lane-h: 36px;
+  }
+
+  .nl-pin {
+    font-size: 1.1rem;
+  }
+
+  .nl-answer {
+    top: 34px;
+  }
+
+  .nl-answer-label {
+    font-size: var(--fs-ui);
+  }
+
+  .nv-result {
+    padding: 3px var(--space-4);
+    font-size: var(--fs-ui);
   }
 }
