@@ -1,23 +1,35 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { strings } from '../lib/strings';
+import { games } from '../lib/games';
 
-export default function Home() {
+export default function GameMenu() {
   return (
-    <main className="center-page">
+    <main className="menu-page">
       <Head>
-        <title>{strings.titleHome}</title>
+        <title>{strings.titleMenu}</title>
       </Head>
-      <h1 className="title">{strings.title}</h1>
-      <p className="hint">{strings.chooseDevice}</p>
-      <div className="role-buttons">
-        <Link href="/host" className="btn btn-gold btn-lg">
-          {strings.hostRole}
-        </Link>
-        <Link href="/play" className="btn btn-blue btn-lg">
-          {strings.playerRole}
-        </Link>
-      </div>
+      <header className="menu-header">
+        <h1 className="title">{strings.siteName}</h1>
+        <p className="hint">{strings.menuIntro}</p>
+      </header>
+      <ul className={`game-list ${games.length === 1 ? 'game-list-single' : ''}`}>
+        {games.map(({ id, name, href, description, players, previewLabel, Preview }) => (
+          <li key={id}>
+            <Link href={href} className="game-card">
+              <span className="game-preview" role="img" aria-label={previewLabel}>
+                <Preview />
+              </span>
+              <span className="game-body">
+                <span className="game-name">{name}</span>
+                <span className="game-players">{players}</span>
+                <span className="game-description">{description}</span>
+                <span className="game-cta">{strings.menuPlay(name)}</span>
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }

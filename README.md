@@ -34,6 +34,7 @@ kompileres når den åpnes).
 
 Terminalen skriver ut lenkene:
 
+- **Meny med alle spill (PC):** `http://localhost:3000/`
 - **Vertsskjerm (PC):** `http://localhost:3000/host`
 - **Spillere (mobil):** `http://<din-lokale-ip>:3000/play`
 

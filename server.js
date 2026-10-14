@@ -27,14 +27,20 @@ app.prepare().then(() => {
 
   httpServer.listen(port, '0.0.0.0', () => {
     console.log('');
-    console.log('Jeopardy-spillet kjorer!');
-    console.log(`  Vertsskjerm (PC):   http://localhost:${port}/host`);
+    console.log('Spillkveld kjorer!');
+    console.log(`  Meny, start her (PC): http://localhost:${port}/`);
     const ips = getLocalIps();
     if (ips.length === 0) {
       console.log('  Fant ingen lokal nettverksadresse. Sjekk at du er koblet til WiFi.');
     } else {
       ips.forEach((ip) => {
-        console.log(`  Spillere (mobil):   http://${ip}:${port}/play`);
+        console.log(`  Meny (mobil):         http://${ip}:${port}/`);
+      });
+      console.log('');
+      console.log('  Snarveier til Jeopardy:');
+      console.log(`    Vert (PC):          http://localhost:${port}/host`);
+      ips.forEach((ip) => {
+        console.log(`    Spiller (mobil):    http://${ip}:${port}/play`);
       });
     }
     console.log('');

@@ -243,7 +243,7 @@ function Countdown({ remaining, total }) {
     <div className={`countdown ${remaining <= 5 ? 'countdown-urgent' : ''}`}>
       <span className="countdown-num">{remaining}</span>
       <span className="countdown-track">
-        <span className="countdown-fill" style={{ width: `${(remaining / total) * 100}%` }} />
+        <span className="countdown-fill" style={{ transform: `scaleX(${remaining / total})` }} />
       </span>
     </div>
   );

@@ -1,6 +1,6 @@
 # Jeopardy-spill – prosjektnotater
 
-Flerspillerspill i Jeopardy-stil på lokalt nettverk. Verten (PC/TV) viser brettet på `/host`,
+Spillkveld: en meny (`/`) med selskapsspill på lokalt nettverk. Første spill er Jeopardy: verten (PC/TV) viser brettet på `/host`,
 opptil 10 spillere buzzer fra mobilen på `/play`. Alt er på norsk, med poeng.
 
 ## Teknisk oppsett
@@ -11,7 +11,11 @@ opptil 10 spillere buzzer fra mobilen på `/play`. Alt er på norsk, med poeng.
 - `lib/questions.js` + `questions.json`: 37 kategorier, 5 vanskelighetsgrader, flere alternative
   spørsmål per grad (ett trekkes tilfeldig).
 - `lib/strings.js`: all UI-tekst. `lib/useCountdown.js`: delt nedtellings-hook.
-- `pages/index.js`, `pages/host.js`, `pages/play.js`, `styles/globals.css` (alle farger er tokens).
+- `pages/index.js` er spillmenyen («Spillkveld»). Spillene listes i `lib/games.js`; et nytt spill
+  legges til med én oppføring der (navn, `href`, beskrivelse, antall spillere og en animert
+  forhåndsvisning i `components/`, som spilles ved hover/fokus og automatisk på berøringsskjermer).
+- Jeopardy: `pages/jeopardy.js` (velg vert/spiller), `pages/host.js`, `pages/play.js`.
+  `styles/globals.css` (alle farger er tokens).
 
 ## Kjøring
 - Spillkvelden: `npm run build` og så `npm start` (produksjon, bygges til `.next-prod`, starter på

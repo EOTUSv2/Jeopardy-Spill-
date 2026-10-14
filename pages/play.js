@@ -300,9 +300,13 @@ function PlayerGame({ state, socket }) {
     }
   }
 
+  // Buzz on touch-down rather than on release: a tap's release comes
+  // 80-120 ms later, and that is exactly the margin the race is decided by.
+  // Keyboard and other clicks without a pointer press still work via onClick.
   function handleBuzz() {
-    vibrate(25);
+    if (buzzDisabled) return;
     socket.emit('player:buzz');
+    vibrate(25);
   }
 
   return (
@@ -324,7 +328,12 @@ function PlayerGame({ state, socket }) {
       <button
         className={`buzz-button ${buzzDisabled ? 'disabled' : ''}`}
         disabled={buzzDisabled}
-        onClick={handleBuzz}
+        onPointerDown={(e) => {
+          if (e.button === 0) handleBuzz();
+        }}
+        onClick={(e) => {
+          if (e.detail === 0) handleBuzz();
+        }}
       >
         BUZZ
       </button>

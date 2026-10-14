@@ -812,7 +812,8 @@ a.hint {
   height: 100%;
   border-radius: 999px;
   background: var(--cobalt);
-  transition: width 1s linear, background-color 0.3s var(--ease-out);
+  transform-origin: left center;
+  transition: transform 1s linear, background-color 0.3s var(--ease-out);
 }
 
 .countdown-urgent {
@@ -2063,4 +2064,360 @@ a.hint {
   background: var(--ink);
   color: var(--sun);
   font-weight: var(--fw-bold);
+}
+
+/* ---------- Game menu (front page) ---------- */
+.menu-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-7);
+  padding: var(--space-7) max(var(--space-5), env(safe-area-inset-right)) var(--space-8)
+    max(var(--space-5), env(safe-area-inset-left));
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.menu-header .title,
+.menu-header .hint {
+  margin: 0;
+}
+
+.game-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--space-6);
+}
+
+.game-list-single {
+  max-width: 560px;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 4px solid var(--ink);
+  border-radius: 24px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: var(--fw-body);
+  text-decoration: none;
+  box-shadow: 0 18px 36px rgba(12, 10, 48, 0.3);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+.game-card:focus-visible {
+  outline: 4px solid var(--sun);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 48px rgba(12, 10, 48, 0.38);
+  }
+}
+
+.game-preview {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: var(--stage);
+  border-bottom: 4px solid var(--ink);
+  overflow: hidden;
+}
+
+.game-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-5) var(--space-6);
+}
+
+.game-name {
+  font-size: var(--fs-question);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.game-players {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-ui);
+  color: var(--ink-soft);
+}
+
+.game-description {
+  font-size: var(--fs-ui);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 44ch;
+}
+
+.game-cta {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border-radius: 14px;
+  background: var(--sun);
+  color: var(--ink);
+  font-size: var(--fs-ui);
+  font-weight: var(--fw-bold);
+  transition: background-color 0.2s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .game-card:hover .game-cta {
+    background: var(--ink);
+    color: var(--sun);
+  }
+}
+
+.back-link {
+  margin-top: var(--space-4);
+  color: var(--on-stage-soft);
+  font-weight: var(--fw-ui);
+  text-underline-offset: 4px;
+}
+
+/* ---------- Jeopardy preview scene ----------
+   Rests as a still board. Hovering or focusing the card (or any touch
+   screen, which cannot hover) switches the animations on through the
+   --jp-* names, so each run starts from the beginning. */
+.game-card:is(:hover, :focus-visible) .jp-scene {
+  --jp-wave: jpWave;
+  --jp-pick: jpPick;
+  --jp-phone: jpPhone;
+  --jp-buzz: jpBuzz;
+  --jp-points: jpPoints;
+}
+
+@media (hover: none) {
+  .jp-scene {
+    --jp-wave: jpWave;
+    --jp-pick: jpPick;
+    --jp-phone: jpPhone;
+    --jp-buzz: jpBuzz;
+    --jp-points: jpPoints;
+  }
+}
+
+.jp-scene {
+  position: absolute;
+  inset: 0;
+  container-type: size;
+  display: grid;
+  place-items: center;
+}
+
+.jp-board {
+  width: 86%;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2cqi;
+  perspective: 600px;
+}
+
+.jp-col {
+  display: grid;
+  gap: 2cqi;
+}
+
+.jp-head {
+  height: 6cqi;
+  border-radius: 1.4cqi;
+  background: var(--paper);
+}
+
+.jp-cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.45;
+  border-radius: 1.6cqi;
+  background: var(--cell);
+  color: var(--sun);
+  font-size: 3.1cqi;
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  animation: var(--jp-wave, none) 6s var(--ease-out) infinite;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+
+.jp-picked {
+  background: none;
+  transform-style: preserve-3d;
+  outline: 0.6cqi solid transparent;
+  outline-offset: 0.4cqi;
+  animation: var(--jp-pick, none) 6s var(--ease-out) infinite;
+  z-index: 2;
+}
+
+.jp-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  backface-visibility: hidden;
+}
+
+.jp-front {
+  background: var(--cell);
+  color: var(--sun);
+}
+
+.jp-back {
+  background: var(--sun);
+  color: var(--ink);
+  font-size: 1.9cqi;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotateY(180deg);
+}
+
+.jp-phone {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 17cqi;
+  aspect-ratio: 0.56;
+  display: grid;
+  place-items: center;
+  border: 0.8cqi solid var(--ink);
+  border-bottom: none;
+  border-radius: 3cqi 3cqi 0 0;
+  background: var(--p-2);
+  transform: translateY(105%);
+  animation: var(--jp-phone, none) 6s var(--ease-out) infinite;
+}
+
+.jp-buzz {
+  display: grid;
+  place-items: center;
+  width: 11cqi;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--coral);
+  border: 0.5cqi solid var(--ink);
+  color: var(--ink);
+  font-size: 1.9cqi;
+  font-weight: var(--fw-bold);
+  animation: var(--jp-buzz, none) 6s ease-out infinite;
+}
+
+.jp-points {
+  position: absolute;
+  top: 34%;
+  right: 6%;
+  z-index: 3;
+  padding: 0.6cqi 2cqi;
+  border-radius: 999px;
+  border: 0.5cqi solid var(--ink);
+  background: var(--mint);
+  color: var(--mint-ink);
+  font-size: 3cqi;
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  opacity: 0;
+  animation: var(--jp-points, none) 6s var(--ease-out) infinite;
+}
+
+/* The board wakes with a quick ripple across the cells. */
+@keyframes jpWave {
+  0%,
+  12%,
+  100% {
+    transform: none;
+  }
+  5% {
+    transform: translateY(-1.2cqi);
+  }
+}
+
+/* The picked cell lifts, turns over to Daily Double, holds, turns back. */
+@keyframes jpPick {
+  0%,
+  10% {
+    transform: none;
+    outline-color: transparent;
+  }
+  16% {
+    transform: scale(1.18);
+    outline-color: var(--sun);
+  }
+  28%,
+  74% {
+    transform: scale(1.18) rotateY(180deg);
+    outline-color: var(--sun);
+  }
+  86%,
+  100% {
+    transform: none;
+    outline-color: transparent;
+  }
+}
+
+/* A phone slides up and buzzes while the Daily Double is showing. */
+@keyframes jpPhone {
+  0%,
+  32% {
+    transform: translateY(105%);
+  }
+  40%,
+  80% {
+    transform: translateY(8%);
+  }
+  90%,
+  100% {
+    transform: translateY(105%);
+  }
+}
+
+@keyframes jpBuzz {
+  0%,
+  44%,
+  52%,
+  100% {
+    transform: none;
+  }
+  47% {
+    transform: scale(0.86);
+  }
+}
+
+/* The points rise from the board after the buzz. */
+@keyframes jpPoints {
+  0%,
+  52% {
+    opacity: 0;
+    transform: translateY(2cqi) scale(0.8);
+  }
+  58%,
+  74% {
+    opacity: 1;
+    transform: none;
+  }
+  84%,
+  100% {
+    opacity: 0;
+    transform: translateY(-3cqi);
+  }
 }
